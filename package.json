@@ -1,0 +1,11 @@
+{
+  "name": "website-umkm",
+  "version": "1.0.0",
+  "description": "Website UMKM with Tailwind CSS",
+  "scripts": {
+    "build": "tailwindcss -i ./src/assets/css/tailwind.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+} 
