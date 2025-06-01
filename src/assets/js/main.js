@@ -1,8 +1,7 @@
-// Add any JavaScript functionality here
 document.addEventListener('DOMContentLoaded', function() {
-    // Load components
-    const components = ['header', 'footer', 'hero', 'testimonial'];
+    const components = ['header', 'footer', 'hero', 'testimonial', 'totalServices'];
     
+    // ngefetch halaman
     components.forEach(component => {
         const element = document.getElementById(component);
         if (element) {
@@ -10,8 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 .then(response => response.text())
                 .then(data => {
                     element.innerHTML = data;
+
+                    // Jalankan init function jika ada setelah konten dimuat
+                    if (window[`init_${component}`]) {
+                        window[`init_${component}`]();
+                    }
                 })
                 .catch(error => console.error('Error loading component:', error));
         }
     });
-}); 
+});
