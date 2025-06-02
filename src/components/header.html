@@ -1,13 +1,80 @@
-<header class="bg-white shadow-md w-full">
-    <nav class="container px-24 py-4">
-        <div class="flex items-center justify-between">
-            <div class="text-xl font-bold text-red-500">UMKM</div>
-            <div class="hidden md:flex space-x-6">
-                <a href="../pages/index.html" class="text-gray-700 hover:text-gray-900">Beranda</a>
-                <a href="../pages/tentang.html" class="text-gray-700 hover:text-gray-900">Tentang</a>
-                <a href="../pages/layanan.html" class="text-gray-700 hover:text-gray-900">Layanan</a>
-                <a href="../pages/kontak.html" class="text-gray-700 hover:text-gray-900">Kontak</a>
-            </div>
-        </nav>
+<header class="w-full h-auto lg:px-12  py-6 fixed top-0 z-999 flex flex-col justify-center items-center  ">
+  <main class="flex justify-between w-full px-8 rounded-2xl backdrop-blur-[4px] ">
+    <!-- Logo dummy -->
+    <div class="flex gap-4 items-center">
+      <div class="w-10 h-10 bg-amber-400 rounded-full"></div>
+      <h1 class="font-lexend font-bold text-lg text-primary">Logo</h1>
     </div>
-</header> 
+
+    <!-- navbar desktop -->
+    <div class="hidden lg:flex gap-6">
+      <nav class="py-3 px-12 rounded-full flex items-center bg-primary/80 backdrop-blur-xs">
+        <ol class="flex gap-10 items-center justify-center">
+          <li
+            class="relative group text-white font-lexend hover:text-yellow duration-300 transition-colors ease-out font-semibold cursor-pointer"
+          >
+          <a href="../pages/tentang.html">Beranda</a>
+            
+            <div
+              class="bg-yellow h-[3px] w-0 group-hover:w-full transition-all duration-300 absolute left-0 -bottom-1"
+            ></div>
+          </li>
+          <li
+            class="relative group text-white font-lexend hover:text-yellow duration-300 transition-colors ease-out font-semibold cursor-pointer"
+          >
+            <a href="../pages/tentang.html">Tentang Kami</a>
+            <div
+              class="bg-yellow h-[3px] w-0 group-hover:w-full transition-all duration-300 absolute left-0 -bottom-1"
+            ></div>
+          </li>
+          <li
+            class="relative group text-white font-lexend hover:text-yellow duration-300 transition-colors ease-out font-semibold cursor-pointer"
+          >
+            <a href="../pages/layanan.html">Layanan</a>
+            <div
+              class="bg-yellow h-[3px] w-0 group-hover:w-full transition-all duration-300 absolute left-0 -bottom-1"
+            ></div>
+          </li>
+          <li
+            class="relative group text-white font-lexend hover:text-yellow duration-300 transition-colors ease-out font-semibold cursor-pointer"
+          >
+            <a href="../pages/blog.html">Blog</a>
+            <div
+              class="bg-yellow h-[3px] w-0 group-hover:w-full transition-all duration-300 absolute left-0 -bottom-1"
+            ></div>
+          </li>
+        </ol>
+      </nav>
+
+      <!-- login button -->
+      <div
+        class="px-10 py-3 rounded-full flex justify-center items-center bg-primary group hover:bg-secondary cursor-pointer transition-colors duration-300 ease-out"
+      >
+        <h1
+          class="text-white font-lexend font-semibold text-lg group-hover:text-yellow transition-colors duration-300 ease-out"
+        >
+          Masuk
+        </h1>
+      </div>
+    </div>
+
+    <!-- navbar mobile & Ipad -->
+     <div class="flex lg:hidden items-center p-2 bg-primary rounded-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="M4 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m0 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m1 5a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2z"/></svg>
+     </div>
+     <!-- <div class="lg:hidden absolute left-0 top-0 min-h-[100dvh] h-auto w-full bg-primary">
+        <nav>
+            <ul>
+                <li>Beranda</li>
+                <li>Tentang Kami</li>
+                <li>Layanan</li>
+                <li>Blog</li>
+            </ul>
+        </nav>
+     </div> -->
+  </main>
+</header>
+<!-- <a href="../pages/index.html" class="text-gray-700 hover:text-gray-900">Beranda</a>
+<a href="../pages/tentang.html" class="text-gray-700 hover:text-gray-900">Tentang</a>
+<a href="../pages/layanan.html" class="text-gray-700 hover:text-gray-900">Layanan</a>
+<a href="../pages/kontak.html" class="text-gray-700 hover:text-gray-900">Kontak</a> -->

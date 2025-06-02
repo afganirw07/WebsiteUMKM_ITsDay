@@ -1,6 +1,22 @@
-@import "tailwindcss";
 
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
-
 /* font angka */
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+/* font pada banner */
+@import url('https://db.onlinewebfonts.com/c/110f69c8a2764bdc93e28fb1adda2499?family=FSP+DEMO+-+Integral+CF+Bold');
+
+@import "tailwindcss";
+
+@theme {
+    --font-tilt: "Tilt Warp";  
+    --font-lexend: "Lexend";
+    --font-urbanist: "Urbanist";
+    --font-spring : "FSP DEMO - Integral CF Bold";
+    --color-primary: #023235;
+    --color-secondary: #00454A;
+    --color-Green-200: #ADFCC5;
+    --color-Green-400: #00D77A;
+    --color-crystal: #EFFEF7;
+    --color-yellow: #FFF4B6;
+}
