@@ -1,9 +1,9 @@
 function init_totalServices() {
   const counters = [
-    { id: 'count1', end: 199, duration: 2000 },
-    { id: 'count2', end: 199, duration: 2000 },
-    { id: 'count3', end: 98, duration: 2000, suffix: '%' },
-    { id: 'count4', end: 30, duration: 2000 }
+    { id: 'count1', end: 199, duration: 4000 },
+    { id: 'count2', end: 199, duration: 4000 },
+    { id: 'count3', end: 98, duration: 4000, suffix: '%' },
+    { id: 'count4', end: 30, duration: 4000 }
   ];
 
   counters.forEach(counter => {
