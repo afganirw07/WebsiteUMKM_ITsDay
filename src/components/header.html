@@ -1,14 +1,14 @@
-<header class="w-full h-auto lg:px-12  py-6 fixed top-0 z-999 flex flex-col justify-center items-center  ">
-  <main class="flex justify-between w-full px-8 rounded-2xl backdrop-blur-[4px] ">
+<header class="w-full h-auto lg:px-12 px-4 py-4 fixed top-0 z-999 flex flex-col justify-center items-center  ">
+  <main class="flex justify-between w-full px-8 py-2 rounded-2xl  backdrop-blur-[2px]">
     <!-- Logo dummy -->
     <div class="flex gap-4 items-center">
       <div class="w-10 h-10 bg-amber-400 rounded-full"></div>
-      <h1 class="font-lexend font-bold text-lg text-primary">Logo</h1>
+      <h1 class="font-lexend font-bold text-lg text-white">Logo</h1>
     </div>
 
     <!-- navbar desktop -->
     <div class="hidden lg:flex gap-6">
-      <nav class="py-3 px-12 rounded-full flex items-center bg-primary/80 backdrop-blur-xs">
+      <nav class="py-3 px-12 rounded-full flex items-center bg-primary backdrop-blur-xs">
         <ol class="flex gap-10 items-center justify-center">
           <li
             class="relative group text-white font-lexend hover:text-yellow duration-300 transition-colors ease-out font-semibold cursor-pointer"
@@ -59,19 +59,37 @@
     </div>
 
     <!-- navbar mobile & Ipad -->
-     <div class="flex lg:hidden items-center p-2 bg-primary rounded-lg">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="M4 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m0 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m1 5a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2z"/></svg>
-     </div>
-     <!-- <div class="lg:hidden absolute left-0 top-0 min-h-[100dvh] h-auto w-full bg-primary">
-        <nav>
-            <ul>
-                <li>Beranda</li>
-                <li>Tentang Kami</li>
-                <li>Layanan</li>
-                <li>Blog</li>
-            </ul>
-        </nav>
-     </div> -->
+  <!-- Toggle Burger Button -->
+<div id="burger" class="fixed top-1 right-4 lg:hidden p-2 bg-primary rounded-lg cursor-pointer z-[99]">
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+    <path fill="white"
+      d="M4 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m0 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m1 5a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2z"/>
+  </svg>
+</div>
+
+<!-- Menu Mobile -->
+<div id="menu"
+  class="lg:hidden md:flex md:flex-col md:justify-center md:items-center fixed -top-4 -left-4 w-screen min-h-[100dvh] bg-primary/80 backdrop-blur-md transform translate-x-full  transition-all duration-500 ease-in-out flex  py-20 z-[99]">
+  <nav class="font-bold  font-lexend text-white">
+    <ul class="space-y-4 md:text-3xl text-2xl md:text-center text-left">
+      <li class=" border-b-[3px] border-primary w-screen rounded-none md:rounded-2xl px-12 py-2 hover:text-yellow transition-colors duration-300 ease-out cursor-pointer">Beranda</li>
+      <li class=" border-b-[3px] border-primary w-screen rounded-none md:rounded-2xl px-12 py-2 hover:text-yellow transition-colors duration-300 ease-out cursor-pointer">Tentang Kami</li>
+      <li class=" border-b-[3px] border-primary w-screen rounded-none md:rounded-2xl px-12 py-2 hover:text-yellow transition-colors duration-300 ease-out cursor-pointer">Layanan</li>
+      <li class=" border-b-[3px] border-primary w-screen rounded-none md:rounded-2xl px-12 py-2 hover:text-yellow transition-colors duration-300 ease-out cursor-pointer">Blog</li>
+      <li class=" border-b-[3px] border-primary w-screen rounded-none md:rounded-2xl px-12 py-2 hover:text-yellow transition-colors duration-300 ease-out cursor-pointer">Login</li>
+    </ul>
+  </nav>
+  
+
+  <!-- Tombol Close -->
+  <div id="close" class="absolute top-6 right-12 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+      <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+        d="M18 3v18M12 3v18M6 3v18" />
+    </svg>
+  </div>
+</div>
+
   </main>
 </header>
 <!-- <a href="../pages/index.html" class="text-gray-700 hover:text-gray-900">Beranda</a>
