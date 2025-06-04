@@ -1,29 +1,30 @@
 function init_totalServices() {
   const counters = [
-    { id: 'count1', end: 199, duration: 12000 },
-    { id: 'count2', end: 199, duration: 12000 },
-    { id: 'count3', end: 98, duration: 12000, suffix: '%' },
-    { id: 'count4', end: 30, duration: 12000 }
+    { id: 'count1', end: 199, duration: 8000 },
+    { id: 'count2', end: 199, duration: 8000 },
+    { id: 'count3', end: 98, duration: 8000, suffix: '%' },
+    { id: 'count4', end: 30, duration: 8000 }
   ];
 
   counters.forEach(counter => {
-    const element = document.getElementById(counter.id);
-    if (!element) return;
+    const el = document.getElementById(counter.id);
+    if (!el) return;
 
+    const startTime = performance.now();
     const start = 0;
-    const increment = counter.end / (counter.duration / 16);
-    let current = start;
 
-    const updateCount = () => {
-      current += increment;
-      if (current < counter.end) {
-        element.textContent = Math.floor(current) + (counter.suffix || '');
-        requestAnimationFrame(updateCount);
-      } else {
-        element.textContent = counter.end + (counter.suffix || '');
+    const animate = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / counter.duration, 1); // max 1
+      const value = Math.floor(start + progress * (counter.end - start));
+
+      el.textContent = value + (counter.suffix || '');
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
       }
     };
 
-    updateCount();
+    requestAnimationFrame(animate);
   });
 }

@@ -1,4 +1,4 @@
-<section class="w-full h-auto bg-primary ">
+<section class="w-full h-auto bg-primary">
   <div class="md:px-20 px-6 py-18 flex flex-col justify-center items-center">
     <h1
       class="md:text-4xl text-2xl text-center font-bold font-lexend text-white"
@@ -9,21 +9,139 @@
 
   <!-- parrent why -->
   <div
-    class="w-full bg-Green-100 h-auto lg:px-20 md:px-6 px-4 md:py-2 py-6 lg:rounded-t-[8%] rounded-t-4xl"
+    class="w-full bg-Green-100 h-auto lg:px-20 md:px-6 px-4 md:py-18 py-6 lg:rounded-t-[8%] rounded-t-4xl"
   >
-
-  <!-- why Header card -->
-    <div>
-
+  <div class="space-y-20 w-full h-full ">
+    <!-- why Header card -->
+    <div class="flex justify-evenly">
       <!-- card1 -->
-      <div class="bg-darkGray min-w-[50px] max-w-[250px] px-4 py-6 flex justify-center items-center rounded-xl relative ">
+      <div
+      id="card1"
+        class="flex-1 bg-secondary hover:bg-secondary cursor-pointer min-w-[100px] lg:max-w-[250px] md:max-w-[220px] max-w-[120px] md:px-4 md:py-6 py-4 px-2 flex justify-center items-center rounded-xl relative transition-all duration-300 ease-out"
+      >
         <div class="flex flex-col gap-4 justify-center items-center">
-          <img class="flex justify-center items-center scale-120" src="../assets/icon/Muslim.svg" alt="">
-          <h1 class="text-xl font-lexend font-bold text-white">Perintah Agama</h1>
+          <img
+            class="flex justify-center items-center scale-120"
+            src="/src/assets/icon/Muslim.svg"
+            alt=""
+          />
+          <h1 class="md:block hidden lg:text-xl text-lg font-lexend font-bold text-white">
+            Perintah Agama
+          </h1>
         </div>
-        <div class=" absolute -bottom-6 inline-block w-0 h-0 border-solid rotate-180 border-t-0 border-r-[25px] border-l-[25px] border-b-[25px] border-l-transparent border-r-transparent border-t-transparent border-b-secondary" ></div>
+        <div
+          id="triangle1"
+          class="absolute md:-bottom-6  -bottom-3 hidden w-0 h-0 border-solid rotate-180 border-t-0
+          md:border-r-[25px] border-r-[15px]  
+          md:border-l-[25px] border-l-[15px]  
+          md:border-b-[25px] border-b-[15px]  border-l-transparent border-r-transparent border-t-transparent border-b-secondary  transition-all duration-300 ease-out"
+        ></div>
       </div>
-
+      <!-- card2 -->
+      <div
+      id="card2"
+        class="flex-1 bg-darkGray hover:bg-secondary cursor-pointer min-w-[100px] lg:max-w-[250px] md:max-w-[220px] max-w-[120px] md:px-4 md:py-6 py-4 px-2 flex justify-center items-center rounded-xl relative  transition-all duration-300 ease-out"
+      >
+        <div class="flex flex-col gap-4 justify-center items-center">
+          <img
+            class="flex justify-center items-center scale-120"
+            src="/src/assets/icon/ri_government-fill.svg"
+            alt=""
+          />
+          <h1 class="md:block hidden  lg:text-xl text-lg font-lexend font-bold text-white">
+            Aturan Pemerintah
+          </h1>
+        </div>
+        <div
+        id="triangle2"
+          class="absolute md:-bottom-6 -bottom-3 hidden w-0 h-0 border-solid rotate-180 border-t-0
+          md:border-r-[25px] border-r-[15px]  
+          md:border-l-[25px] border-l-[15px]  
+          md:border-b-[25px] border-b-[15px]  border-l-transparent border-r-transparent border-t-transparent border-b-secondary  transition-all duration-300 ease-out"
+        ></div>
+      </div>
+      <!-- card3 -->
+      <div
+      id="card3"
+        class="flex-1 bg-darkGray hover:bg-secondary cursor-pointer min-w-[100px] lg:max-w-[250px] md:max-w-[220px] max-w-[120px] md:px-4 md:py-6 py-4 px-2 flex justify-center items-center rounded-xl relative  transition-all duration-300 ease-out"
+      >
+        <div class="flex flex-col gap-4 justify-center items-center">
+          <img
+            class="flex justify-center items-center scale-120"
+            src="/src/assets/icon/mage_heart-health-fill.svg"
+            alt=""
+          />
+          <h1 class="md:block hidden  lg:text-xl text-lg font-lexend font-bold text-white">
+            Sehat dan Bersih
+          </h1>
+        </div>
+        <div
+        id="triangle3"
+          class=" absolute md:-bottom-6 -bottom-3 hidden w-0 h-0 border-solid rotate-180 border-t-0
+          md:border-r-[25px] border-r-[15px]  
+          md:border-l-[25px] border-l-[15px]  
+          md:border-b-[25px] border-b-[15px]  border-l-transparent border-r-transparent border-t-transparent border-b-secondary  transition-all duration-300 ease-out"
+        ></div>
+      </div>
     </div>
-  </div> 
+
+    <!-- parrent article -->
+    <div class="lg:px-16 relative w-full h-full flex-grow ">
+      <!-- parrent content 1 -->
+      <div id="content1" class=" bg-white py-8 px-12 opacity-100 flex md:flex-row flex-col gap-6 justify-center items-center rounded-2xl  transition-all duration-700 ease-in-out">
+        <!-- image -->
+        <div class="flex w-full justify-center items-center gap-6">
+          <img class="w-[380px] h-auto" src="/src/assets/img/muslim.png" alt="">
+        </div>
+
+        <!-- content -->
+        <div class="py-8 space-y-4 w-full">
+          <div class="space-y-2">
+          <h1 class="text-2xl font-bold font-lexend">Perintah Agama</h1>
+          <div class="w-[60px] h-[4px] rounded-full bg-Green-400"></div>
+          </div>
+            <p class="font-urbanist">Sertifikasi halal memastikan produk memenuhi syariat Islam, memberikan ketenangan bagi konsumen Muslim. Selain makanan dan minuman, sertifikasi ini mencakup kosmetik, farmasi, dan produk sehari-hari, menjadi standar penting bagi industri. Dengan meningkatnya kesadaran global, banyak perusahaan berupaya memperoleh sertifikat ini untuk memperluas pasar dan memenuhi kebutuhan konsumen Muslim.</p>
+        </div>
+      </div>
+      <!-- parrent content 2 -->
+      <div id="content2" class=" hidden bg-white transition-all duration-700 ease-in-out opacity-0 py-8 px-12 gap-6 justify-center items-center rounded-2xl">
+        <div class=" flex md:flex-row flex-col ">
+        <!-- image -->
+        <div class="flex w-full justify-center items-center gap-6">
+          <img class="w-[380px] h-auto" src="/src/assets/img/Government.png" alt="">
+        </div>
+
+        <!-- content -->
+        <div class="py-8 space-y-4 w-full">
+          <div class="space-y-2">
+          <h1 class="text-2xl font-bold font-lexend">Aturan Pemerintah</h1>
+          <div class="w-[60px] h-[4px] rounded-full bg-Green-400"></div>
+          </div>
+            <p class="font-urbanist">Produk bersertifikat halal tidak hanya memenuhi aspek keagamaan, tetapi juga menjamin kebersihan dan kesehatan. Proses produksinya diawasi ketat agar bebas dari najis, kotoran, dan bahan berbahaya, sehingga menghasilkan produk yang lebih higienis, aman dikonsumsi, dan berkualitas tinggi. Selain itu, standar halal juga berkontribusi pada kepercayaan konsumen serta peningkatan kualitas industri.</p>
+        </div>
+        </div>
+      </div>
+      <!-- parrent content 3 -->
+      <div id="content3" class=" bg-white py-8 px-12 transition-all duration-700 ease-in-out hidden opacity-0
+       md:flex-row flex-col gap-6 justify-center items-center rounded-2xl">
+       <div class="flex md:flex-row flex-col ">
+        <!-- image -->
+        <div class="flex w-full justify-center items-center gap-6">
+          <img class="w-[380px] h-auto" src="/src/assets/img/Healthy.png" alt="">
+        </div>
+
+        <!-- content -->
+        <div class="py-8 space-y-4 w-full">
+          <div class="space-y-2">
+          <h1 class="text-2xl font-bold font-lexend">Sehat dan Bersih</h1>
+          <div class="w-[60px] h-[4px] rounded-full bg-Green-400"></div>
+          </div>
+            <p class="font-urbanist">Produk bersertifikat halal tidak hanya memenuhi aspek keagamaan, tetapi juga menjamin kebersihan dan kesehatan. Proses produksinya diawasi ketat agar bebas dari najis, kotoran, dan bahan berbahaya, sehingga menghasilkan produk yang lebih higienis, aman dikonsumsi, dan berkualitas tinggi. Selain itu, standar halal juga berkontribusi pada kepercayaan konsumen serta peningkatan kualitas industri.</p>
+        </div>
+       </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
 </section>
