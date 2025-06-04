@@ -1,6 +1,6 @@
 // main.js
 document.addEventListener('DOMContentLoaded', function() {
-    const components = ['header', 'footer', 'hero', 'testimonial', 'totalServices', 'why'];
+    const components = ['header', 'footer', 'banner', 'testimonial', 'totalServices', 'why', 'reason'];
     
     components.forEach(component => {
         const element = document.getElementById(component);
