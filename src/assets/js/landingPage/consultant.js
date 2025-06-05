@@ -38,7 +38,7 @@ function createConsultantCard(consultant) {
     const nameLines = consultant.name.split(' ');
     
     return `
-        <div class="consultant-card bg-white rounded-[24px] shadow-lg relative h-[1100px] group transition-all duration-700 ease-out hover:-translate-y-3 hover:shadow-2xl animate-fade-in-up" style="animation-delay: ${Math.random() * 0.5}s">
+        <div class="consultant-card bg-white rounded-[24px] shadow-lg relative md:h-[900px] h-[1000px] group transition-all duration-700 ease-out hover:-translate-y-3 hover:shadow-2xl animate-fade-in-up" style="animation-delay: ${Math.random() * 0.5}s">
             <!-- Gradient Border Effect -->
             <div class="absolute inset-0 rounded-[24px] bg-gradient-to-br from-emerald-400 via-teal-500 to-cyan-500 opacity-0 transition-opacity duration-500 group-hover:opacity-20"></div>
 
@@ -51,10 +51,10 @@ function createConsultantCard(consultant) {
             </div>
 
             <!-- Content Section -->
-            <div class="p-8 space-y-8">
+            <div class="p-6 md:p-8 space-y-6 md:space-y-8">
                 <!-- Header -->
                 <div class="flex justify-between items-start gap-4 group/title transform transition-all duration-500 group-hover:translate-x-2">
-                    <h3 class="text-[32px] font-bold">
+                    <h3 class="text-2xl md:text-[32px] font-bold">
                         ${nameLines.map((line, index) => `
                             <div class="leading-tight hover:text-emerald-600 transition-colors duration-300 animate-fade-in-down" 
                                  style="animation-delay: ${0.1 * (index + 1)}s">
@@ -65,7 +65,7 @@ function createConsultantCard(consultant) {
                 </div>
 
                 <!-- Education -->
-                <p class="text-base text-gray-600 leading-relaxed transform transition-all duration-500 group-hover:translate-x-2 animate-fade-in" style="animation-delay: 0.3s">
+                <p class="text-sm md:text-base text-gray-600 leading-relaxed transform transition-all duration-500 group-hover:translate-x-2 animate-fade-in" style="animation-delay: 0.3s">
                     ${consultant.education}
                 </p>
 
@@ -73,39 +73,39 @@ function createConsultantCard(consultant) {
                 <div class="transform transition-all duration-500 group-hover:translate-x-2 animate-fade-in" style="animation-delay: 0.4s">
                     <span class="text-gray-500 block mb-2 group-hover:text-emerald-600 transition-colors duration-300">Mulai Dari</span>
                     <div class="flex items-baseline gap-3">
-                        <span class="text-2xl font-bold text-emerald-600 animate-pulse group-hover:scale-110 transition-transform duration-300">${consultant.discountedPrice}</span>
-                        <span class="text-base text-gray-400 line-through group-hover:opacity-75 transition-opacity duration-300">${consultant.originalPrice}</span>
+                        <span class="text-xl md:text-2xl font-bold text-emerald-600 animate-pulse group-hover:scale-110 transition-transform duration-300">${consultant.discountedPrice}</span>
+                        <span class="text-sm md:text-base text-gray-400 line-through group-hover:opacity-75 transition-opacity duration-300">${consultant.originalPrice}</span>
                     </div>
                 </div>
 
                 <!-- Experience Badges -->
-                <div class="flex flex-wrap gap-3 animate-fade-in" style="animation-delay: 0.5s">
-                    <div class="inline-flex items-center px-4 py-2 bg-teal-950 text-white rounded-lg text-sm transform transition-all duration-500 hover:scale-105 hover:bg-teal-900 hover:shadow-lg cursor-pointer group/badge">
-                        <img src="/src/assets/icon/list.png" alt="Pengalaman" class="w-5 h-5 mr-2 transition-transform duration-300 group-hover/badge:rotate-12" />
+                <div class="flex flex-wrap gap-2 md:gap-3 animate-fade-in" style="animation-delay: 0.5s">
+                    <div class="inline-flex items-center px-3 md:px-4 py-2 bg-teal-950 text-white rounded-lg text-xs md:text-sm transform transition-all duration-500 hover:scale-105 hover:bg-teal-900 hover:shadow-lg cursor-pointer group/badge">
+                        <img src="/src/assets/icon/list.png" alt="Pengalaman" class="w-4 md:w-5 h-4 md:h-5 mr-2 transition-transform duration-300 group-hover/badge:rotate-12" />
                         <span class="group-hover/badge:translate-x-1 transition-transform duration-300">Pengalaman</span>
                     </div>
-                    <div class="inline-flex items-center px-4 py-2 bg-teal-950 text-white rounded-lg text-sm transform transition-all duration-500 hover:scale-105 hover:bg-teal-900 hover:shadow-lg cursor-pointer group/badge">
-                        <img src="/src/assets/icon/like.png" alt="Like" class="w-5 h-5 mr-2 transition-transform duration-300 group-hover/badge:rotate-12" />
+                    <div class="inline-flex items-center px-3 md:px-4 py-2 bg-teal-950 text-white rounded-lg text-xs md:text-sm transform transition-all duration-500 hover:scale-105 hover:bg-teal-900 hover:shadow-lg cursor-pointer group/badge">
+                        <img src="/src/assets/icon/like.png" alt="Like" class="w-4 md:w-5 h-4 md:h-5 mr-2 transition-transform duration-300 group-hover/badge:rotate-12" />
                         <span class="group-hover/badge:translate-x-1 transition-transform duration-300">99+</span>
                     </div>
                 </div>
 
                 <!-- Tags Container -->
-                <div class="flex flex-wrap gap-2 mb-12 animate-fade-in" style="animation-delay: 0.6s">
-                    <span class="px-4 py-2 text-sm bg-white border border-gray-200 rounded-lg transform transition-all duration-500 hover:scale-105 hover:border-emerald-600 hover:text-emerald-600 hover:shadow-md cursor-pointer group-hover:translate-y-1">
+                <div class="flex flex-wrap gap-2 mb-8 md:mb-12 animate-fade-in" style="animation-delay: 0.6s">
+                    <span class="px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm bg-white border border-gray-200 rounded-lg transform transition-all duration-500 hover:scale-105 hover:border-emerald-600 hover:text-emerald-600 hover:shadow-md cursor-pointer group-hover:translate-y-1">
                         Konsultan
                     </span>
-                    <span class="px-4 py-2 text-sm bg-white border border-gray-200 rounded-lg transform transition-all duration-500 hover:scale-105 hover:border-emerald-600 hover:text-emerald-600 hover:shadow-md cursor-pointer group-hover:translate-y-1" style="transition-delay: 0.1s">
+                    <span class="px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm bg-white border border-gray-200 rounded-lg transform transition-all duration-500 hover:scale-105 hover:border-emerald-600 hover:text-emerald-600 hover:shadow-md cursor-pointer group-hover:translate-y-1" style="transition-delay: 0.1s">
                         Auditor Halal
                     </span>
-                    <span class="px-4 py-2 text-sm bg-white border border-gray-200 rounded-lg transform transition-all duration-500 hover:scale-105 hover:border-emerald-600 hover:text-emerald-600 hover:shadow-md cursor-pointer group-hover:translate-y-1" style="transition-delay: 0.2s">
+                    <span class="px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm bg-white border border-gray-200 rounded-lg transform transition-all duration-500 hover:scale-105 hover:border-emerald-600 hover:text-emerald-600 hover:shadow-md cursor-pointer group-hover:translate-y-1" style="transition-delay: 0.2s">
                         Ekspertis Makanan
                     </span>
                 </div>
             </div>
 
             <!-- Image Container -->
-            <div class="absolute left-0 right-0 bottom-0 h-[550px] overflow-hidden rounded-b-[24px] group-hover:shadow-lg transition-shadow duration-500">
+            <div class="absolute left-0 right-0 bottom-0 h-[400px] md:h-[450px] overflow-hidden rounded-b-[24px] group-hover:shadow-lg transition-shadow duration-500">
                 <!-- Gradient Overlay -->
                 <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
                 
@@ -148,7 +148,7 @@ function initConsultantSection() {
                     </div>
 
                     <!-- Consultant Cards Grid -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                         ${consultants.map(consultant => createConsultantCard(consultant)).join('')}
                     </div>
                 </div>
