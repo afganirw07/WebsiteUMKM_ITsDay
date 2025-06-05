@@ -1,14 +1,19 @@
+// main.js
 document.addEventListener('DOMContentLoaded', function() {
-    const components = ['header', 'footer', 'hero', 'testimonial', 'totalServices'];
+    const components = ['header', 'footer', 'banner', 'testimonial', 'totalServices', 'why', 'reason'];
     
-    // ngefetch halaman
     components.forEach(component => {
         const element = document.getElementById(component);
         if (element) {
-            fetch(`../components/${component}.html`)
+            fetch(`./src/components/${component}.html`)
                 .then(response => response.text())
                 .then(data => {
                     element.innerHTML = data;
+
+                    if (component === 'header') {
+                        // jalankan init navbar setelah header load
+                        if (window.initNavbar) window.initNavbar();
+                    }
 
                     // Jalankan init function jika ada setelah konten dimuat
                     if (window[`init_${component}`]) {
