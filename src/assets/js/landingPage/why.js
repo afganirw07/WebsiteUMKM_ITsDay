@@ -7,7 +7,7 @@ window.init_why = function () {
 
   function hideOthers(exceptCard, exceptTriangle, exceptContent) {
     for (let { card, triangle, content } of cards) {
-      if (triangle !== exceptTriangle) triangle.classList.add('hidden');
+      if (triangle !== exceptTriangle) triangle.classList.add('-translate-y-full', 'opacity-0');
       if (content !== exceptContent) {
         content.classList.add('hidden', 'opacity-0');
         content.classList.remove('opacity-100');
@@ -22,7 +22,7 @@ window.init_why = function () {
   function showContent(selectedCard, selectedTriangle, selectedContent) {
     hideOthers(selectedCard, selectedTriangle, selectedContent);
 
-    selectedTriangle.classList.remove('hidden');
+    selectedTriangle.classList.remove('-translate-y-full', 'opacity-0');
     selectedContent.classList.remove('hidden');
     setTimeout(() => {
       selectedContent.classList.remove('opacity-0');

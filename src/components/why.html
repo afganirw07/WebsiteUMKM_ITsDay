@@ -9,7 +9,7 @@
 
   <!-- parrent why -->
   <div
-    class="w-full bg-Green-100 h-auto lg:px-20 md:px-6 px-4 md:py-18 py-6 lg:rounded-t-[8%] rounded-t-4xl"
+    class="w-full bg-Green-100 h-auto lg:px-20 md:px-10 px-4 md:py-18 py-6 lg:rounded-t-[8%] rounded-t-4xl"
   >
   <div class="space-y-20 w-full h-full ">
     <!-- why Header card -->
@@ -31,10 +31,10 @@
         </div>
         <div
           id="triangle1"
-          class="absolute md:-bottom-6  -bottom-3 hidden w-0 h-0 border-solid rotate-180 border-t-0
+          class="absolute opacity-0 md:-bottom-6  -bottom-3 -translate-y-full w-0 h-0 border-solid rotate-180 border-t-0
           md:border-r-[25px] border-r-[15px]  
           md:border-l-[25px] border-l-[15px]  
-          md:border-b-[25px] border-b-[15px]  border-l-transparent border-r-transparent border-t-transparent border-b-secondary  transition-all duration-300 ease-out"
+          md:border-b-[25px] border-b-[15px]  border-l-transparent border-r-transparent border-t-transparent border-b-secondary  transition-transform duration-300 ease-out"
         ></div>
       </div>
       <!-- card2 -->
@@ -54,10 +54,10 @@
         </div>
         <div
         id="triangle2"
-          class="absolute md:-bottom-6 -bottom-3 hidden w-0 h-0 border-solid rotate-180 border-t-0
+          class="absolute opacity-0 md:-bottom-6 -bottom-3 -translate-y-full w-0 h-0 border-solid rotate-180 border-t-0
           md:border-r-[25px] border-r-[15px]  
           md:border-l-[25px] border-l-[15px]  
-          md:border-b-[25px] border-b-[15px]  border-l-transparent border-r-transparent border-t-transparent border-b-secondary  transition-all duration-300 ease-out"
+          md:border-b-[25px] border-b-[15px]  border-l-transparent border-r-transparent border-t-transparent border-b-secondary  transition-transform duration-300 ease-out"
         ></div>
       </div>
       <!-- card3 -->
@@ -77,10 +77,10 @@
         </div>
         <div
         id="triangle3"
-          class=" absolute md:-bottom-6 -bottom-3 hidden w-0 h-0 border-solid rotate-180 border-t-0
+          class=" absolute opacity-0 md:-bottom-6 -bottom-3 -translate-y-full w-0 h-0 border-solid rotate-180 border-t-0
           md:border-r-[25px] border-r-[15px]  
           md:border-l-[25px] border-l-[15px]  
-          md:border-b-[25px] border-b-[15px]  border-l-transparent border-r-transparent border-t-transparent border-b-secondary  transition-all duration-300 ease-out"
+          md:border-b-[25px] border-b-[15px]  border-l-transparent border-r-transparent border-t-transparent border-b-secondary  transition-transform duration-300 ease-out"
         ></div>
       </div>
     </div>
@@ -88,7 +88,7 @@
     <!-- parrent article -->
     <div class="lg:px-16 relative w-full h-full flex-grow ">
       <!-- parrent content 1 -->
-      <div id="content1" class=" bg-white py-8 px-12 opacity-100 flex md:flex-row flex-col gap-6 justify-center items-center rounded-2xl  transition-all duration-700 ease-in-out">
+      <div id="content1" class=" bg-white py-8 px-12 shadow-lg/20 shadow-Green-400 opacity-100 flex md:flex-row flex-col gap-6 justify-center  rounded-2xl  transition-all duration-700 ease-in-out">
         <!-- image -->
         <div class="flex w-full justify-center items-center gap-6">
           <img class="w-[380px] h-auto" src="/src/assets/img/muslim.png" alt="">
@@ -101,10 +101,13 @@
           <div class="w-[60px] h-[4px] rounded-full bg-Green-400"></div>
           </div>
             <p class="font-urbanist">Sertifikasi halal memastikan produk memenuhi syariat Islam, memberikan ketenangan bagi konsumen Muslim. Selain makanan dan minuman, sertifikasi ini mencakup kosmetik, farmasi, dan produk sehari-hari, menjadi standar penting bagi industri. Dengan meningkatnya kesadaran global, banyak perusahaan berupaya memperoleh sertifikat ini untuk memperluas pasar dan memenuhi kebutuhan konsumen Muslim.</p>
+            <button class="bg-primary text-white font-bold font-lexend px-4 py-2 rounded-lg">
+               Baca Selengkapnya
+            </button>
         </div>
       </div>
       <!-- parrent content 2 -->
-      <div id="content2" class=" hidden bg-white transition-all duration-700 ease-in-out opacity-0 py-8 px-12 gap-6 justify-center items-center rounded-2xl">
+      <div id="content2" class=" hidden bg-white shadow-lg/20 shadow-Green-400 transition-all duration-700 ease-in-out opacity-0 md:flex-row flex-col  py-8 px-12 gap-6 justify-center items-center rounded-2xl">
         <div class=" flex md:flex-row flex-col ">
         <!-- image -->
         <div class="flex w-full justify-center items-center gap-6">
@@ -117,12 +120,15 @@
           <h1 class="text-2xl font-bold font-lexend">Aturan Pemerintah</h1>
           <div class="w-[60px] h-[4px] rounded-full bg-Green-400"></div>
           </div>
-            <p class="font-urbanist">Produk bersertifikat halal tidak hanya memenuhi aspek keagamaan, tetapi juga menjamin kebersihan dan kesehatan. Proses produksinya diawasi ketat agar bebas dari najis, kotoran, dan bahan berbahaya, sehingga menghasilkan produk yang lebih higienis, aman dikonsumsi, dan berkualitas tinggi. Selain itu, standar halal juga berkontribusi pada kepercayaan konsumen serta peningkatan kualitas industri.</p>
+            <p class="font-urbanist">Sesuai dengan Undang-Undang Nomor 33 Tahun 2014 tentang Jaminan Produk Halal, setiap pelaku usaha termasuk UMKM wajib memiliki sertifikat halal untuk produk yang beredar di Indonesia. Sertifikat ini tidak hanya menunjukkan kepatuhan terhadap syariat Islam, tetapi juga menjamin bahwa produk tersebut higienis, aman, dan bermutu. Dengan adanya sertifikasi halal, kepercayaan konsumen meningkat dan daya saing UMKM pun semakin kuat</p>
+             <button class="bg-primary text-white font-bold font-lexend px-4 py-2 rounded-lg">
+               Baca Selengkapnya
+            </button>
         </div>
         </div>
       </div>
       <!-- parrent content 3 -->
-      <div id="content3" class=" bg-white py-8 px-12 transition-all duration-700 ease-in-out hidden opacity-0
+      <div id="content3" class=" bg-white shadow-lg/20 shadow-Green-400 py-8 px-12 transition-all duration-700 ease-in-out hidden opacity-0
        md:flex-row flex-col gap-6 justify-center items-center rounded-2xl">
        <div class="flex md:flex-row flex-col ">
         <!-- image -->
@@ -137,6 +143,9 @@
           <div class="w-[60px] h-[4px] rounded-full bg-Green-400"></div>
           </div>
             <p class="font-urbanist">Produk bersertifikat halal tidak hanya memenuhi aspek keagamaan, tetapi juga menjamin kebersihan dan kesehatan. Proses produksinya diawasi ketat agar bebas dari najis, kotoran, dan bahan berbahaya, sehingga menghasilkan produk yang lebih higienis, aman dikonsumsi, dan berkualitas tinggi. Selain itu, standar halal juga berkontribusi pada kepercayaan konsumen serta peningkatan kualitas industri.</p>
+             <button class="bg-primary text-white font-bold font-lexend px-4 py-2 rounded-lg">
+               Baca Selengkapnya
+            </button> 
         </div>
        </div>
       </div>
