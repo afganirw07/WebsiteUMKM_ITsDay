@@ -1,0 +1,39 @@
+.marquee__content {
+  animation: scroll-left 30s linear infinite;
+}
+
+.marquee__content--right {
+  animation: scroll-right 30s linear infinite;
+}
+
+.marquee__content:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+  transform: translateX(0);
+  z-index: 10;
+}
+
+.marquee__content--right:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+  transform: translateX(0);
+  z-index: 10;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 1rem));
+  }
+}
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(calc(-100% - 1rem));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
