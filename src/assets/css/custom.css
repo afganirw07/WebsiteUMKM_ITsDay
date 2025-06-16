@@ -1,23 +1,15 @@
 .marquee__content {
-  animation: scroll-left 30s linear infinite;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
-.marquee__content--right {
-  animation: scroll-right 30s linear infinite;
+.marquee-left {
+  animation-name: scroll-left;
 }
 
-.marquee__content:hover {
-  animation-play-state: paused;
-  cursor: pointer;
-  transform: translateX(0);
-  z-index: 10;
-}
-
-.marquee__content--right:hover {
-  animation-play-state: paused;
-  cursor: pointer;
-  transform: translateX(0);
-  z-index: 10;
+.marquee-right {
+  animation-name: scroll-right;
 }
 
 @keyframes scroll-left {
@@ -37,3 +29,4 @@
     transform: translateX(0);
   }
 }
+
