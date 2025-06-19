@@ -1,0 +1,38 @@
+<section class="relative w-full py-16 bg-gradient-to-br from-emerald-50 via-white to-yellow-50" id="contact">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="bg-white rounded-3xl shadow-2xl p-6 md:p-12 flex flex-col md:flex-row gap-12 items-stretch">
+      <!-- Left: Info & Form (wider) -->
+      <div class="flex-[1.5] min-w-0 flex flex-col justify-center">
+        <h2 class="text-4xl md:text-5xl font-bold font-lexend text-primary mb-4">Hubungi Kami</h2>
+        <p class="text-sm md:text-base text-gray-700 font-urbanist mb-8">Tertarik dengan layanan kami atau butuh konsultasi? Hubungi kami melalui kontak yang tersedia. Kami siap mendampingi Anda setiap langkahnya. Atau chat langsung dengan <span class="font-bold text-emerald-700">EcoBot</span> untuk jawaban instan dan bantuan kapan saja!</p>
+        <form class="space-y-6 w-full" autocomplete="off">
+          <div>
+            <input id="contact-name" name="name" type="text" required placeholder="Nama Lengkap" class="w-full px-0 py-3 border-b-2 border-gray-200 focus:border-emerald-400 focus:outline-none font-urbanist text-gray-800 bg-transparent placeholder-gray-400 text-lg" />
+          </div>
+          <div>
+            <input id="contact-phone" name="phone" type="text" required placeholder="Nomer Handphone" class="w-full px-0 py-3 border-b-2 border-gray-200 focus:border-emerald-400 focus:outline-none font-urbanist text-gray-800 bg-transparent placeholder-gray-400 text-lg" />
+          </div>
+          <div>
+            <input id="contact-email" name="email" type="email" required placeholder="E-mail" class="w-full px-0 py-3 border-b-2 border-gray-200 focus:border-emerald-400 focus:outline-none font-urbanist text-gray-800 bg-transparent placeholder-gray-400 text-lg" />
+          </div>
+          <div>
+            <input id="contact-message" name="message" required placeholder="Apa yang anda ingin tanyakan?" class="w-full px-0 py-3 border-b-2 border-gray-200 focus:border-emerald-400 focus:outline-none font-urbanist text-gray-800 bg-transparent placeholder-gray-400 text-lg" />
+          </div>
+          <button type="submit" class="w-full py-3 rounded-xl bg-primary text-white font-bold font-lexend text-lg shadow-md hover:bg-secondary transition-colors mt-4">KIRIM</button>
+        </form>
+      </div>
+      <!-- Right: Map & Address (narrower) -->
+      <div class="flex-[1] min-w-0 flex flex-col items-center justify-center gap-4">
+        <div class="w-full h-[340px] md:h-full rounded-2xl overflow-hidden shadow-lg border border-emerald-100 flex items-center justify-center">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.349964479836!2d106.8656680758696!3d-6.369028062273998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ebe7e2b2b6e1%3A0x2e2e2e2e2e2e2e2e!2sSMK%20Taruna%20Bhakti!5e0!3m2!1sid!2sid!4v1680000000000!5m2!1sid!2sid"
+            width="100%" height="100%" style="border:0; min-height: 280px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="SMK Taruna Bhakti Map"></iframe>
+        </div>
+        <div class="flex items-center gap-2 mt-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" /><circle cx="12" cy="10" r="3" /></svg>
+          <span class="font-lexend text-base md:text-lg text-gray-800">Jl. Raya Pekapuran No. 128, Kota Depok, Jawa Barat 16452</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
