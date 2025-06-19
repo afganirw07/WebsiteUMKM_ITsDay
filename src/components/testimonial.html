@@ -1,19 +1,100 @@
-<section class="bg-white py-12">
-    <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-8">Testimonial Pelanggan</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-gray-50 p-6 rounded-lg">
-                <p class="text-gray-600 mb-4">"Sangat membantu UMKM saya berkembang di era digital"</p>
-                <p class="font-semibold">- Ahmad, Pengusaha Kuliner</p>
-            </div>
-            <div class="bg-gray-50 p-6 rounded-lg">
-                <p class="text-gray-600 mb-4">"Platform yang user-friendly dan sangat bermanfaat"</p>
-                <p class="font-semibold">- Sarah, Pemilik Toko Fashion</p>
-            </div>
-            <div class="bg-gray-50 p-6 rounded-lg">
-                <p class="text-gray-600 mb-4">"Omset UMKM saya meningkat berkat bantuan platform ini"</p>
-                <p class="font-semibold">- Budi, Pengrajin Lokal</p>
-            </div>
+<section class="relative w-full min-h-[600px] overflow-hidden bg-white">
+  <!-- Background Elements -->
+  <div class="absolute w-[300px] h-[300px] right-[15%] top-[10%] bg-emerald-200/30 rounded-full blur-[80px]"></div>
+  <div class="absolute w-[250px] h-[250px] left-[10%] top-[60%] bg-yellow-100/40 rounded-full blur-[60px]"></div>
+  <div class="absolute w-[400px] h-[400px] left-[-10%] top-[20%] bg-emerald-900/20 rounded-full blur-[100px]"></div>
+
+  <!-- Main Content -->
+  <div class="relative z-10 w-full h-full flex flex-col items-center justify-center px-4 py-12">
+    <!-- Title -->
+    <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-teal-900 font-['Lexend'] tracking-tight">
+      <span class="relative inline-block">
+        KATA MEREKA
+        <span class="absolute bottom-0 left-0 w-full h-1 bg-emerald-300/50 transform scale-x-75"></span>
+      </span>
+    </h2>
+
+    <!-- Testimonial Card Wrapper (for arrows) -->
+    <div class="relative w-full max-w-3xl flex items-center justify-center">
+      <!-- Left Arrow -->
+      <button id="testimonial-prev" class="absolute left-[-56px] top-1/2 -translate-y-1/2 p-2 rounded-full bg-emerald-900/60 hover:bg-emerald-900 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400 z-10">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="white" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+        </svg>
+      </button>
+      <!-- Testimonial Card -->
+      <div class="relative w-full bg-gradient-to-br from-teal-900 to-emerald-900 rounded-3xl shadow-2xl p-8 md:p-10 flex flex-col items-center">
+        <!-- Quote Marks -->
+        <div class="absolute top-6 left-8 text-6xl text-emerald-300/30 font-['Lexend']">"</div>
+        <!-- Testimonial Text -->
+        <p id="testimonial-text" class="relative z-10 text-white text-lg md:text-xl font-medium font-['Urbanist'] text-center leading-relaxed mb-8 px-4"></p>
+        <!-- User Profile Section -->
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6 mt-8">
+          <!-- Profile Picture -->
+          <div class="relative">
+            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-teal-300 blur-md animate-pulse"></div>
+            <img id="testimonial-image" class="relative z-10 w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg" src="" alt="">
+          </div>
+          <!-- User Info -->
+          <div class="text-center md:text-left">
+            <h3 id="testimonial-name" class="text-xl font-bold text-white font-['Lexend']"></h3>
+            <p id="testimonial-role" class="text-emerald-200 text-sm font-['Urbanist'] mt-1"></p>
+            <div class="flex justify-center md:justify-start mt-2" id="testimonial-stars"></div>
+          </div>
         </div>
+      </div>
+      <!-- Right Arrow -->
+      <button id="testimonial-next" class="absolute right-[-56px] top-1/2 -translate-y-1/2 p-2 rounded-full bg-emerald-900/60 hover:bg-emerald-900 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400 z-10">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="white" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </button>
     </div>
-</section> 
+
+    <!-- Navigation Dots -->
+    <div id="testimonial-dots" class="flex space-x-3 mt-8"></div>
+  </div>,
+</section>
+<script>
+  // Delayed initialization untuk memastikan semua event handler sudah tersedia
+  setTimeout(() => {
+    if (window.updateTestimonial) {
+      window.updateTestimonial();
+    }
+    
+    const prevBtn = document.getElementById('testimonial-prev');
+    const nextBtn = document.getElementById('testimonial-next');
+    
+    if (window.showPrevTestimonial && prevBtn) {
+      prevBtn.onclick = () => {
+        window.showPrevTestimonial();
+        // Stop auto-rotate saat user klik manual
+        if (window.stopAutoRotate) window.stopAutoRotate();
+        if (window.startAutoRotate) {
+          setTimeout(window.startAutoRotate, 15000); // Restart after 15 seconds
+        }
+      };
+    }
+    
+    if (window.showNextTestimonial && nextBtn) {
+      nextBtn.onclick = () => {
+        window.showNextTestimonial();
+        // Stop auto-rotate saat user klik manual
+        if (window.stopAutoRotate) window.stopAutoRotate();
+        if (window.startAutoRotate) {
+          setTimeout(window.startAutoRotate, 15000); // Restart after 15 seconds
+        }
+      };
+    }
+    
+    // Setup dot navigation event handlers
+    document.querySelectorAll('#testimonial-dots button').forEach(btn => {
+      btn.onclick = () => {
+        if (window.currentTestimonial !== undefined) {
+          window.currentTestimonial = parseInt(btn.getAttribute('data-dot'));
+          if (window.updateTestimonial) window.updateTestimonial();
+        }
+      };
+    });
+  }, 100);
+</script>
