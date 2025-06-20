@@ -1,64 +1,100 @@
 <section class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-start">
-    <!-- Form Kontak -->
-    <div>
-        <h2 class="text-4xl font-bold mb-4 text-gray-900">Hubungi Kami</h2>
-        <p class="text-sm text-gray-600 leading-relaxed mb-8">
-            Tertarik dengan layanan kami atau butuh konsultasi? Hubungi kami melalui kontak yang tersedia. Kami siap
-            mendampingi Anda setiap langkahnya. Atau chat langsung dengan <span
-                class="text-teal-700 font-semibold italic">EcoBot</span> untuk jawaban instan dan bantuan kapan saja!
-        </p>
+  <!-- Form Kontak -->
+  <div>
+    <h2 class="text-4xl font-bold mb-4 text-gray-900">Hubungi Kami</h2>
+    <p class="text-sm text-gray-600 leading-relaxed mb-8">
+      Tertarik dengan layanan kami atau butuh konsultasi? Hubungi kami melalui kontak yang tersedia. Kami siap
+      mendampingi Anda setiap langkahnya. Atau chat langsung dengan
+      <span class="text-teal-700 font-semibold italic">EcoBot</span>
+      untuk jawaban instan dan bantuan kapan saja!
+    </p>
 
-        <form id="contactForm" class="space-y-6">
-            <div>
-                <input type="text" name="nama" placeholder="Nama Lengkap" required
-                    class="w-full border-0 border-b border-gray-300 py-3 px-1 text-base bg-transparent outline-none focus:border-teal-700 transition-colors placeholder-gray-400" />
-            </div>
-            <div>
-                <input type="tel" name="telepon" placeholder="Nomer Handphone" required
-                    class="w-full border-0 border-b border-gray-300 py-3 px-1 text-base bg-transparent outline-none focus:border-teal-700 transition-colors placeholder-gray-400" />
-            </div>
-            <div>
-                <input type="email" name="email" placeholder="E-mail" required
-                    class="w-full border-0 border-b border-gray-300 py-3 px-1 text-base bg-transparent outline-none focus:border-teal-700 transition-colors placeholder-gray-400" />
-            </div>
-            <div>
-                <textarea name="pesan" placeholder="Apa yang anda ingin tanyakan?" required
-                    class="w-full border-0 border-b border-gray-300 py-3 px-1 text-base bg-transparent outline-none focus:border-teal-700 transition-colors placeholder-gray-400 resize-none"
-                    rows="1" style="min-height: 40px;"></textarea>
-            </div>
+    <form id="contactForm" action="https://formsubmit.co/afgandevs@gmail.com" method="POST" class="space-y-6">
+      <!-- Konfigurasi FormSubmit -->
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_subject" value="Pesan Baru dari Website Anda" />
+      <input type="hidden" name="_next" value="https://yourwebsite.com/terkirim.html" />
 
-            <!-- Tombol Kirim -->
-            <div class="pt-4">
-                <button type="submit"
-                    class="w-full bg-teal-800 hover:bg-teal-900 text-white font-medium py-3 px-6 rounded transition-colors duration-200"
-                    style="background-color: #1A3C34;">
-                    KIRIM
-                </button>
-            </div>
-        </form>
+      <!-- Nama -->
+      <div>
+        <input
+          type="text"
+          name="Nama Lengkap"
+          placeholder="Nama Lengkap"
+          required
+          class="w-full border-0 border-b border-gray-300 py-3 px-1 text-base bg-transparent outline-none focus:border-teal-700 transition-colors placeholder-gray-400"
+        />
+      </div>
+
+      <!-- No HP -->
+      <div>
+        <input
+          type="tel"
+          name="Nomer Handphone"
+          placeholder="Nomer Handphone"
+          required
+          class="w-full border-0 border-b border-gray-300 py-3 px-1 text-base bg-transparent outline-none focus:border-teal-700 transition-colors placeholder-gray-400"
+        />
+      </div>
+
+      <!-- Email -->
+      <div>
+        <input
+          type="email"
+          name="Email"
+          placeholder="E-mail"
+          required
+          class="w-full border-0 border-b border-gray-300 py-3 px-1 text-base bg-transparent outline-none focus:border-teal-700 transition-colors placeholder-gray-400"
+        />
+      </div>
+
+      <!-- Pesan -->
+      <div>
+        <textarea
+          name="Pesan"
+          placeholder="Apa yang anda ingin tanyakan?"
+          required
+          class="w-full border-0 border-b border-gray-300 py-3 px-1 text-base bg-transparent outline-none focus:border-teal-700 transition-colors placeholder-gray-400 resize-none"
+          rows="1"
+          style="min-height: 40px"
+        ></textarea>
+      </div>
+
+      <!-- Tombol Kirim -->
+      <div class="pt-4">
+        <button
+          type="submit"
+          class="w-full bg-teal-800 hover:bg-teal-900 text-white font-medium py-3 px-6 rounded transition-colors duration-200"
+          style="background-color: #1A3C34"
+        >
+          KIRIM
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Map dan Alamat -->
+  <div class="flex flex-col">
+    <!-- Google Maps Embed -->
+    <div class="mb-4">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.816859097731!2d106.8674124!3d-6.3844792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ebaff005f277%3A0x9fcd41028665eea8!2sSMKS%20TARUNA%20BHAKTI%20DEPOK!5e0!3m2!1sen!2sid!4v1718894200123!5m2!1sen!2sid"
+        width="100%"
+        height="400"
+        style="border:0; border-radius: 8px"
+        allowfullscreen=""
+        loading="lazy"
+        class="rounded-lg shadow-sm"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
     </div>
 
-    <!-- Map dan Alamat -->
-    <div class="flex flex-col">
-        <!-- Google Maps Embed -->
-      <div class="mb-4">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.816859097731!2d106.8674124!3d-6.3844792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ebaff005f277%3A0x9fcd41028665eea8!2sSMKS%20TARUNA%20BHAKTI%20DEPOK!5e0!3m2!1sen!2sid!4v1718894200123!5m2!1sen!2sid"
-    width="100%" height="400"
-    style="border:0; border-radius: 8px;"
-    allowfullscreen="" loading="lazy"
-    class="rounded-lg shadow-sm"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
-
-
-        <!-- Alamat -->
-        <div class="flex justify-center">
-            <div class="flex items-center space-x-3 text-gray-700">
-                <p class="text-sm font-medium text-center">
-                    Jl. Raya Pekapuran No. 128, Kota Depok, Jawa Barat 16452
-                </p>
-            </div>
-        </div>
+    <!-- Alamat -->
+    <div class="flex justify-center">
+      <div class="flex items-center gap-2 text-gray-700 text-sm max-w-xs text-center">
+        <p class="leading-snug">Jl. Raya Pekapuran No. 128, Kota Depok, Jawa Barat 16452</p>
+      </div>
+    </div>
+  </div>
 </section>
