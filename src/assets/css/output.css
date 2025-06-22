@@ -1479,6 +1479,9 @@
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
   }
+  .py-7 {
+    padding-block: calc(var(--spacing) * 7);
+  }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
   }
@@ -2196,6 +2199,16 @@
       padding-inline: calc(var(--spacing) * 6);
     }
   }
+  .sm\:py-8 {
+    @media (width >= 40rem) {
+      padding-block: calc(var(--spacing) * 8);
+    }
+  }
+  .sm\:py-10 {
+    @media (width >= 40rem) {
+      padding-block: calc(var(--spacing) * 10);
+    }
+  }
   .sm\:py-14 {
     @media (width >= 40rem) {
       padding-block: calc(var(--spacing) * 14);
@@ -2447,6 +2460,16 @@
       padding-block: calc(var(--spacing) * 6);
     }
   }
+  .md\:py-9 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 9);
+    }
+  }
+  .md\:py-12 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 12);
+    }
+  }
   .md\:py-18 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 18);
@@ -2582,6 +2605,11 @@
       padding-inline: calc(var(--spacing) * 20);
     }
   }
+  .lg\:py-16 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 16);
+    }
+  }
   .lg\:text-left {
     @media (width >= 64rem) {
       text-align: left;
@@ -2597,6 +2625,11 @@
     @media (width >= 64rem) {
       font-size: var(--text-xl);
       line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+  .xl\:py-20 {
+    @media (width >= 80rem) {
+      padding-block: calc(var(--spacing) * 20);
     }
   }
   .xl\:text-5xl {
