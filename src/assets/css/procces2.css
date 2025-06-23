@@ -1,13 +1,11 @@
 
     @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Urbanist:wght@300;400;500;600;700&display=swap');
 
-    * {
+    p{
       font-family: 'Urbanist', sans-serif;
     }
 
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Lexend', sans-serif;
-    }
+
 
     .process-card {
       transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);

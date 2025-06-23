@@ -826,6 +826,9 @@
   .max-w-\[650px\] {
     max-width: 650px;
   }
+  .max-w-\[670px\] {
+    max-width: 670px;
+  }
   .max-w-\[1440px\] {
     max-width: 1440px;
   }
@@ -1267,6 +1270,12 @@
   }
   .bg-secondary {
     background-color: var(--color-secondary);
+  }
+  .bg-teal-400 {
+    background-color: var(--color-teal-400);
+  }
+  .bg-teal-600 {
+    background-color: var(--color-teal-600);
   }
   .bg-teal-800 {
     background-color: var(--color-teal-800);
@@ -2615,6 +2624,11 @@
   .md\:px-10 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:px-16 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 16);
     }
   }
   .md\:px-20 {
