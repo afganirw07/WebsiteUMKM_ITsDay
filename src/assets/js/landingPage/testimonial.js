@@ -38,6 +38,7 @@ const testimonials = [
 ];
 
 let currentTestimonial = 0;
+let lastDirection = 'right'; // 'right' (next) atau 'left' (prev)
 
 function renderStars(rating) {
   let stars = '';
@@ -57,7 +58,41 @@ function renderDots(activeIdx) {
   return dots;
 }
 
-function updateTestimonial(retry = 0) {
+function animateTestimonialChange(direction, callback) {
+  const card = document.getElementById('testimonial-card');
+  if (!card) { callback && callback(); return; }
+  // Remove all animasi class
+  card.classList.remove('fade-in', 'fade-out', 'slide-in-right', 'slide-out-left', 'slide-in-left', 'slide-out-right');
+  // Pilih animasi keluar
+  if (direction === 'right') {
+    card.classList.add('fade-out', 'slide-out-left');
+  } else {
+    card.classList.add('fade-out', 'slide-out-right');
+  }
+  // Setelah animasi keluar selesai, ganti data dan animasi masuk
+  card.addEventListener('animationend', function handler(e) {
+    if (e.animationName === 'fadeOut' || e.animationName === 'slideOutLeft' || e.animationName === 'slideOutRight') {
+      card.removeEventListener('animationend', handler);
+      card.classList.remove('fade-out', 'slide-out-left', 'slide-out-right');
+      callback && callback();
+      // Animasi masuk
+      if (direction === 'right') {
+        card.classList.add('fade-in', 'slide-in-right');
+      } else {
+        card.classList.add('fade-in', 'slide-in-left');
+      }
+      // Hapus class animasi masuk setelah selesai
+      card.addEventListener('animationend', function handler2(e2) {
+        if (e2.animationName === 'fadeIn' || e2.animationName === 'slideInRight' || e2.animationName === 'slideInLeft') {
+          card.removeEventListener('animationend', handler2);
+          card.classList.remove('fade-in', 'slide-in-right', 'slide-in-left');
+        }
+      });
+    }
+  });
+}
+
+function updateTestimonial(retry = 0, direction = lastDirection) {
   const t = testimonials[currentTestimonial];
   const textEl = document.getElementById('testimonial-text');
   const nameEl = document.getElementById('testimonial-name');
@@ -66,39 +101,37 @@ function updateTestimonial(retry = 0) {
   const starsEl = document.getElementById('testimonial-stars');
   const dotsEl = document.getElementById('testimonial-dots');
   if (!textEl || !nameEl || !roleEl || !imgEl || !starsEl || !dotsEl) {
-    if (retry < 10) setTimeout(() => updateTestimonial(retry + 1), 150);
+    if (retry < 10) setTimeout(() => updateTestimonial(retry + 1, direction), 150);
     return;
   }
-  try {
-    textEl.innerHTML = t.text || '<span style="color:#f87171">(Pesan tidak ditemukan)</span>';
-    nameEl.innerHTML = t.name || '<span style="color:#f87171">(Nama tidak ditemukan)</span>';
-    roleEl.innerHTML = t.role || '<span style="color:#f87171">(Role tidak ditemukan)</span>';
-    imgEl.src = t.img || '';
-    imgEl.alt = t.name || '';
-    starsEl.innerHTML = renderStars(t.rating);
-    dotsEl.innerHTML = renderDots(currentTestimonial);
-    // Dots event
-    document.querySelectorAll('#testimonial-dots button').forEach(btn => {
-      btn.onclick = () => {
-        currentTestimonial = parseInt(btn.getAttribute('data-dot'));
-        updateTestimonial();
-      };
-    });
-    console.log(`Testimonial loaded: ${t.name} (${t.rating} stars)`, t);
-  } catch (e) {
-    textEl.innerHTML = '<span style="color:#f87171">Error loading testimonial: ' + e.message + '</span>';
-    console.error(e);
-  }
+  textEl.innerHTML = t.text || '<span style="color:#f87171">(Pesan tidak ditemukan)</span>';
+  nameEl.innerHTML = t.name || '<span style="color:#f87171">(Nama tidak ditemukan)</span>';
+  roleEl.innerHTML = t.role || '<span style="color:#f87171">(Role tidak ditemukan)</span>';
+  imgEl.src = t.img || '';
+  imgEl.alt = t.name || '';
+  starsEl.innerHTML = renderStars(t.rating);
+  dotsEl.innerHTML = renderDots(currentTestimonial);
+  // Dots event
+  document.querySelectorAll('#testimonial-dots button').forEach(btn => {
+    btn.onclick = () => {
+      lastDirection = (parseInt(btn.getAttribute('data-dot')) > currentTestimonial) ? 'right' : 'left';
+      currentTestimonial = parseInt(btn.getAttribute('data-dot'));
+      animateTestimonialChange(lastDirection, () => updateTestimonial(0, lastDirection));
+    };
+  });
+  console.log(`Testimonial loaded: ${t.name} (${t.rating} stars)`, t);
 }
 
 function showPrevTestimonial() {
+  lastDirection = 'left';
   currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
-  updateTestimonial();
+  animateTestimonialChange('left', () => updateTestimonial(0, 'left'));
 }
 
 function showNextTestimonial() {
+  lastDirection = 'right';
   currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-  updateTestimonial();
+  animateTestimonialChange('right', () => updateTestimonial(0, 'right'));
 }
 
 // Auto-rotate testimonial setiap 8 detik
@@ -116,6 +149,26 @@ function stopAutoRotate() {
   }
 }
 
+// Scroll to Top Button logic
+function setupScrollToTopBtn() {
+  const btn = document.getElementById('scroll-to-top-btn');
+  if (!btn) return;
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      btn.style.display = 'block';
+      btn.classList.add('fade-in');
+      btn.classList.remove('fade-out');
+    } else {
+      btn.classList.remove('fade-in');
+      btn.classList.add('fade-out');
+      setTimeout(() => { btn.style.display = 'none'; }, 400);
+    }
+  });
+  btn.onclick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   // Keyboard navigation
   document.addEventListener('keydown', function(e) {
@@ -130,9 +183,14 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(startAutoRotate, 15000);
     }
   });
-  
   // Start auto-rotate
   setTimeout(startAutoRotate, 3000); // Mulai setelah 3 detik
+  // Animasi pertama kali
+  setTimeout(() => {
+    const card = document.getElementById('testimonial-card');
+    if (card) card.classList.add('fade-in', 'slide-in-right');
+  }, 200);
+  setupScrollToTopBtn();
 });
 
 window.updateTestimonial = updateTestimonial;
