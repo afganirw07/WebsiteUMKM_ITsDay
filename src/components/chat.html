@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReKicks Chat Widget</title>
+    <title>AI Asisten</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .scrollbar-hide {
@@ -55,29 +55,6 @@
     </style>
 </head>
 <body class="min-h-screen bg-gray-100 p-8">
-    <!-- Demo content -->
-    <div class="max-w-4xl mx-auto">
-        <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">ReKicks Store</h1>
-        <p class="text-gray-600 text-center mb-8">Chat widget akan muncul di pojok kanan bawah</p>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold mb-3">Nike Air Max</h3>
-                <p class="text-gray-600">Premium sneakers untuk aktivitas sehari-hari</p>
-                <p class="text-2xl font-bold text-red-500 mt-3">$120</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold mb-3">Adidas Ultraboost</h3>
-                <p class="text-gray-600">Sepatu lari dengan teknologi terdepan</p>
-                <p class="text-2xl font-bold text-red-500 mt-3">$180</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold mb-3">Converse All Star</h3>
-                <p class="text-gray-600">Sepatu kasual klasik yang timeless</p>
-                <p class="text-2xl font-bold text-red-500 mt-3">$65</p>
-            </div>
-        </div>
-    </div>
 
     <!-- Chat Widget -->
     <section class="rekicks-chat-widget">
@@ -119,7 +96,7 @@
                         <span class="absolute bottom-0 right-0 w-3 h-3 bg-green-400 rounded-full border-2 border-white"></span>
                     </div>
                     <div class="min-w-0">
-                        <span class="font-semibold text-sm sm:text-base">ReKicks Assistant</span>
+                        <span class="font-semibold text-sm sm:text-base">EcoBot Assistant</span>
                         <p class="text-xs opacity-80 hidden sm:block">Typically replies within a few minutes</p>
                     </div>
                 </div>
@@ -205,42 +182,6 @@
                     .replace(/\*(.*?)\*/g, '<em>$1</em>');
             }
 
-            // Mock products data (since backend is not available)
-            getMockProducts() {
-                return [
-                    {
-                        _id: '1',
-                        title: 'Nike Air Max 270',
-                        brand: 'Nike',
-                        retailPrice: 150,
-                        image: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/awjogtdnqxniqqk0wpgf/air-max-270-shoes-0lFhzr.png',
-                        description: 'Comfortable and stylish sneakers',
-                        category: 'sneakers',
-                        colorway: 'white black'
-                    },
-                    {
-                        _id: '2',
-                        title: 'Adidas Ultraboost 22',
-                        brand: 'Adidas',
-                        retailPrice: 180,
-                        image: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8cf4ac7d6e5f44dea7b4ad6b0113c0a0_9366/Ultraboost_22_Shoes_Black_GX3061_01_standard.jpg',
-                        description: 'Premium running shoes',
-                        category: 'running',
-                        colorway: 'black white'
-                    },
-                    {
-                        _id: '3',
-                        title: 'Converse Chuck Taylor All Star',
-                        brand: 'Converse',
-                        retailPrice: 65,
-                        image: 'https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dw0af2b3db/images/a_107/M7650_A_107X1.jpg',
-                        description: 'Classic canvas sneakers',
-                        category: 'casual',
-                        colorway: 'white'
-                    }
-                ];
-            }
-
             // Filter relevant products
             filterRelevantProducts(products, userInput) {
                 const input = userInput.toLowerCase();
@@ -269,8 +210,6 @@
             // Get AI recommendation (mock response for demo)
             async getRecommendation(userInput) {
                 try {
-                    const allProducts = this.getMockProducts();
-
                     const isProductRecommendation =
                         /rekomendasi|suggest|recommend|sepatu|shoes|sneaker|tas|jam|produk|product|cari|find|looking for/i.test(
                             userInput
