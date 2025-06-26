@@ -16,11 +16,16 @@
     <link href="./src/assets/css/output.css" rel="stylesheet">
     <link rel="stylesheet" href="./src/assets/css/custom.css">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&family=Urbanist:wght@400;500&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
 </head>
 <body>
     <!-- Include header -->
     <div class="relative overflow-x-hidden">
         <div class="" id="header"></div>
+
+        <div id="test-aos"></div>
 
         <!-- Include hero -->
         <div id="banner"></div>
@@ -75,5 +80,16 @@
     <script src="./src/assets/js/landingPage/testimonial.js"></script>
     <script src="./src/assets/js/landingPage/contact.js"></script>
     <script src="./src/assets/js/landingPage/gemini.js" defer></script>
+
+    <!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // Inisialisasi awal AOS
+  AOS.init({
+    duration: 600,
+    easing: 'ease-out',
+  });
+</script>
+
 </body>
 </html>     

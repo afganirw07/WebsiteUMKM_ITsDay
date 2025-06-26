@@ -11,6 +11,7 @@
     "tailwindcss": "^4.1.8"
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.8"
+    "@tailwindcss/cli": "^4.1.8",
+    "aos": "^2.3.4"
   }
 }
