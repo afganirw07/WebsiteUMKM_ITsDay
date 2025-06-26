@@ -41,4 +41,33 @@ window.init_why = function () {
 
   showContent(cards[0].card, cards[0].triangle, cards[0].content);
 
+function readMore() {
+  const readMoreBtns = document.querySelectorAll('.read-more');
+
+  readMoreBtns.forEach((btn) => {
+    const paragraph = btn.previousElementSibling;
+    if (!paragraph) return;
+
+    btn.addEventListener('click', () => {
+      const isExpanded = !paragraph.classList.contains('line-clamp-3');
+
+      if (isExpanded) {
+        // Kalau sudah terbuka, tutup kembali
+        paragraph.classList.add('line-clamp-3');
+        paragraph.classList.remove('line-clamp-none');
+        btn.textContent = 'Baca Selengkapnya';
+      } else {
+        // Kalau masih tertutup, buka
+        paragraph.classList.remove('line-clamp-3');
+        paragraph.classList.add('line-clamp-none');
+        btn.textContent = 'Lihat Lebih Sedikit';
+      }
+    });
+  });
+}
+
+
+  readMore();
+
 };
+
