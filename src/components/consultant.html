@@ -1,117 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konsultan Professional</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&family=Urbanist:wght@400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Konsultan Profesional</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&family=Urbanist:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body class="bg-white">
-    <div class="w-[1280px] h-[775px] relative mx-auto">
-        <!-- Background Elements -->
-        <div class="w-80 h-72 left-[440px] top-[-107px] absolute bg-yellow-100/80 blur-3xl"></div>
-        <div class="w-96 h-96 left-[939px] top-[111px] absolute bg-emerald-200/30 blur-[50px]"></div>
-        <div class="w-[585px] h-72 left-[-228px] top-[345px] absolute bg-emerald-900/30 blur-[50px]"></div>
+<body class="bg-white font-['Lexend']">
 
-        <!-- Header -->
-        <div class="w-[680px] h-12 left-[307px] top-[55px] absolute text-center text-black text-4xl font-bold font-['Lexend']">
-            Hubungi Konsultan Professional
-        </div>
-        <div class="w-[532px] h-8 left-[384px] top-[109px] absolute text-center text-black text-2xl font-light font-['Lexend']">
-            Terverifikasi Oleh MUI (Majelis Ulama Indonesia)
-        </div>
+  <div class="relative max-w-screen-xl mx-auto px-4 py-10">
 
-        <!-- Consultant Cards Container -->
-        <div id="consultantContainer" class="mt-[176px] relative">
-            <!-- Cards will be inserted here by JavaScript -->
-        </div>
+    <!-- Background Blur Elements -->
+    <div class="absolute w-52 h-52 bg-yellow-100/70 blur-3xl top-0 left-1/3 -z-10"></div>
+    <div class="absolute w-64 h-64 bg-emerald-200/30 blur-[60px] top-32 right-0 -z-10"></div>
+    <div class="absolute w-96 h-40 bg-emerald-900/30 blur-[60px] bottom-10 left-0 -z-10"></div>
+
+    <!-- Header -->
+    <h1 class="text-center text-2xl sm:text-3xl md:text-4xl font-bold text-black">
+      Hubungi Konsultan Profesional
+    </h1>
+    <p class="text-center text-base sm:text-lg text-black mt-2 font-light">
+      Terverifikasi oleh MUI (Majelis Ulama Indonesia)
+    </p>
+
+    <!-- Grid Konsultan -->
+    <div id="consultantContainer" class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Cards via JS -->
     </div>
+  </div>
 
-    <script>
-        const consultants = [
-            {
-                name: 'Steven\nMuhammad\nIbrahim',
-                education: 'S1 Fakultas Agama Islam, Universitas Islam Negeri',
-                image: 'https://placehold.co/206x215',
-                position: { left: '131.96px' }
-            },
-            {
-                name: 'Hillary\nNatasha\nAzzahra',
-                education: 'S2 Fakultas Pendidikan Islam, Universitas Al Azhar Jakarta',
-                image: 'https://placehold.co/170x211',
-                position: { left: '390.23px' }
-            },
-            {
-                name: 'Fernando\nSadikin',
-                education: 'S1 Fakultas Agama Islam, BINUS University Jakarta',
-                image: 'https://placehold.co/198x199',
-                position: { left: '648.50px' }
-            },
-            {
-                name: 'Michelle\nRose',
-                education: 'S1 Fakultas Pendidikan Dasar, Universitas Indonesia',
-                image: 'https://placehold.co/188x249',
-                position: { left: '906.77px' }
-            }
-        ];
+  <script>
+    const consultants = [
+      {
+        name: 'Steven\nMuhammad\nIbrahim',
+        education: 'S1 Fakultas Agama Islam, Universitas Islam Negeri',
+        image: 'https://placehold.co/206x215',
+      },
+      {
+        name: 'Hillary\nNatasha\nAzzahra',
+        education: 'S2 Fakultas Pendidikan Islam, Universitas Al Azhar Jakarta',
+        image: 'https://placehold.co/170x211',
+      },
+      {
+        name: 'Fernando\nSadikin',
+        education: 'S1 Fakultas Agama Islam, BINUS University Jakarta',
+        image: 'https://placehold.co/198x199',
+      },
+      {
+        name: 'Michelle\nRose',
+        education: 'S1 Fakultas Pendidikan Dasar, Universitas Indonesia',
+        image: 'https://placehold.co/188x249',
+      }
+    ];
 
-        function createConsultantCard(consultant) {
-            return `
-                <div class="w-60 h-96 absolute bg-neutral-50 rounded-[10px] shadow-[4px_4px_10px_0px_rgba(0,0,0,0.25)]" style="left: ${consultant.position.left}">
-                    <!-- Arrow Icon -->
-                    <div class="w-7 h-7 right-4 top-7 absolute overflow-hidden">
-                        <div class="w-2 h-3.5 left-[11.25px] top-[7.50px] absolute outline outline-2 outline-offset-[-0.89px] outline-black"></div>
-                    </div>
+    function createConsultantCard(consultant) {
+      return `
+        <div class="bg-neutral-50 rounded-xl shadow-md p-4 flex flex-col justify-between h-[340px] sm:h-[360px]">
+          <!-- Arrow Icon -->
+          <div class="absolute top-4 right-4 w-5 h-5 border-2 border-black rotate-45"></div>
 
-                    <!-- Consultant Info -->
-                    <div class="w-32 h-20 left-[27px] top-[28px] absolute text-black text-xl font-bold font-['Lexend'] whitespace-pre-line">
-                        ${consultant.name}
-                    </div>
+          <!-- Nama -->
+          <div class="text-black text-sm sm:text-base font-bold whitespace-pre-line mb-1">${consultant.name}</div>
 
-                    <!-- Education -->
-                    <div class="w-48 h-4 left-[27px] top-[117px] absolute text-black text-[6.87px] font-light font-['Lexend']">
-                        ${consultant.education}
-                    </div>
+          <!-- Edukasi -->
+          <p class="text-xs text-black font-light mb-2">${consultant.education}</p>
 
-                    <!-- Experience Badge -->
-                    <div class="w-20 h-4 left-[27px] top-[143px] absolute bg-teal-950 rounded-[3px] flex items-center">
-                        <div class="w-2.5 h-2.5 ml-2 bg-white"></div>
-                        <span class="ml-2 text-white text-[8px] font-medium font-['Urbanist']">Pengalaman</span>
-                    </div>
+          <!-- Badge -->
+          <div class="flex gap-2 mb-2">
+            <div class="bg-teal-950 text-white text-[10px] px-2 py-0.5 rounded flex items-center gap-1">
+              <span class="w-2 h-2 bg-white block rounded-full"></span> Pengalaman
+            </div>
+            <div class="bg-teal-950 text-white text-[10px] px-2 py-0.5 rounded flex items-center gap-1">
+              <span class="w-2 h-2 bg-white block rounded-full"></span> 99+
+            </div>
+          </div>
 
-                    <!-- Rating Badge -->
-                    <div class="w-10 h-4 left-[114px] top-[143px] absolute bg-teal-950 rounded-[3px] flex items-center">
-                        <div class="w-2.5 h-2.5 ml-2 bg-white"></div>
-                        <span class="ml-1 text-white text-[7px] font-medium font-['Urbanist']">99+</span>
-                    </div>
+          <!-- Skills -->
+          <div class="flex flex-wrap gap-1 text-[9px] mb-2">
+            <span class="px-2 py-0.5 border border-black rounded-sm">Konsultan</span>
+            <span class="px-2 py-0.5 border border-black rounded-sm">Auditor Halal</span>
+            <span class="px-2 py-0.5 border border-black rounded-sm">Ekspertis Makanan</span>
+          </div>
 
-                    <!-- Skills -->
-                    <div class="flex gap-2 left-[27px] top-[168px] absolute">
-                        <div class="px-2 py-1 text-black text-[7px] font-normal font-['Urbanist'] rounded-sm border-[0.50px] border-black">
-                            Konsultan
-                        </div>
-                        <div class="px-2 py-1 text-black text-[7px] font-normal font-['Urbanist'] rounded-sm border-[0.50px] border-black">
-                            Auditor Halal
-                        </div>
-                        <div class="px-2 py-1 text-black text-[7px] font-normal font-['Urbanist'] rounded-sm border-[0.50px] border-black">
-                            Ekspertis Makanan
-                        </div>
-                    </div>
+          <!-- Gambar -->
+          <img src="${consultant.image}" alt="${consultant.name}" class="w-full h-[100px] object-cover rounded" />
+        </div>
+      `;
+    }
 
-                    <!-- Consultant Image -->
-                    <img class="w-auto h-20 left-[27px] top-[207px] absolute object-cover" src="${consultant.image}" alt="${consultant.name}">
-                </div>
-            `;
-        }
-
-        // Render consultant cards
-        document.addEventListener('DOMContentLoaded', () => {
-            const container = document.getElementById('consultantContainer');
-            consultants.forEach(consultant => {
-                container.innerHTML += createConsultantCard(consultant);
-            });
-        });
-    </script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('consultantContainer');
+      consultants.forEach(consultant => {
+        container.innerHTML += createConsultantCard(consultant);
+      });
+    });
+  </script>
 </body>
-</html> 
+</html>
