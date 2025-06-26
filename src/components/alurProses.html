@@ -1,64 +1,68 @@
-<section class="bg-white py-12 px-4 sm:px-6 lg:px-20">
+<section class="bg-white py-16 px-4 sm:px-6 lg:px-20">
   <!-- Judul -->
   <h2 class="text-center text-2xl sm:text-3xl font-bold text-black mb-16">BAGAIMANA PROSESNYA?</h2>
 
-  <!-- Wrapper -->
-  <div class="relative max-w-6xl mx-auto">
-    <!-- Garis Tengah -->
+  <div class="relative max-w-6xl mx-auto space-y-28">
+    <!-- Garis tengah (hanya desktop) -->
     <div class="hidden md:block absolute top-0 left-1/2 transform -translate-x-1/2 w-[4px] h-full bg-gray-300 z-0"></div>
-    <div class="md:hidden absolute top-0 left-4 w-[2px] h-full bg-gray-300 z-0"></div>
 
-    <!-- Langkah 1 -->
-    <div class="relative md:flex mb-20">
-      <div class="absolute z-10 left-1/2 md:-translate-x-1/2 top-0 w-10 h-10 bg-emerald-600 text-white font-bold flex items-center justify-center rounded-full shadow-md">
-        1
-      </div>
-      <div class="md:w-1/2 md:pr-12 mt-12 md:mt-0 z-10">
-        <h3 class="text-lg sm:text-xl font-semibold text-emerald-700 mb-4">Menghubungi Konsultan</h3>
+    <!-- LANGKAH 1 -->
+    <div class="relative flex flex-col-reverse md:flex-row items-center gap-10 md:gap-16">
+      <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-primary text-white font-bold flex items-center justify-center rounded-full z-10 shadow-md">1</div>
+
+      <!-- Text -->
+      <div class="w-full md:w-1/2">
+        <h3 class="text-xl font-semibold text-primary mb-4 text-center md:text-left">Menghubungi Konsultan</h3>
         <ul class="space-y-4">
-          <li class="bg-emerald-100 text-sm p-4 rounded-lg shadow">Anda menghubungi konsultan yang sudah dipilih sebelumnya</li>
-          <li class="bg-emerald-100 text-sm p-4 rounded-lg shadow">Melakukan pembayaran sesuai dengan nominal yang tertera</li>
-          <li class="bg-emerald-100 text-sm p-4 rounded-lg shadow">Konsultasikan terkait produk yang anda hasilkan agar sesuai dengan standar produk halal</li>
+          <li class="bg-primary text-white text-sm p-4 rounded-lg">Anda menghubungi konsultan yang sudah dipilih sebelumnya</li>
+          <li class="bg-primary text-white text-sm p-4 rounded-lg">Melakukan pembayaran sesuai dengan nominal yang tertera</li>
+          <li class="bg-primary text-white text-sm p-4 rounded-lg">Konsultasikan terkait produk yang anda hasilkan agar sesuai dengan standar produk halal</li>
         </ul>
       </div>
-      <div class="md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
-        <img src="/src/assets/icon/proses1.png" alt="Menghubungi Konsultan" class="w-60 sm:w-72 md:w-80 h-auto" />
+
+      <!-- Gambar -->
+      <div class="w-full md:w-1/2 flex justify-center">
+        <img src="/src/assets/icon/proses1.png" alt="Proses 1" class="w-56 md:w-72 h-auto object-contain" />
       </div>
     </div>
 
-    <!-- Langkah 2 -->
-    <div class="relative md:flex md:flex-row-reverse mb-20">
-      <div class="absolute z-10 left-1/2 md:-translate-x-1/2 top-0 w-10 h-10 bg-teal-600 text-white font-bold flex items-center justify-center rounded-full shadow-md">
-        2
-      </div>
-      <div class="md:w-1/2 md:pl-12 mt-12 md:mt-0 z-10">
-        <h3 class="text-lg sm:text-xl font-semibold text-teal-700 mb-4">Mengisi Formulir Perusahaan</h3>
+    <!-- LANGKAH 2 -->
+    <div class="relative flex flex-col-reverse md:flex-row-reverse items-center gap-10 md:gap-16">
+      <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-primary text-white font-bold flex items-center justify-center rounded-full z-10 shadow-md">2</div>
+
+      <!-- Text -->
+      <div class="w-full md:w-1/2">
+        <h3 class="text-xl font-semibold text-primary mb-4 text-center md:text-right">Mengisi Formulir Perusahaan</h3>
         <ul class="space-y-4">
-          <li class="bg-teal-100 text-sm p-4 rounded-lg shadow">Anda diharuskan mengisi formulir perusahaan untuk kelengkapan data dalam proses sertifikasi nantinya</li>
-          <li class="bg-teal-100 text-sm p-4 rounded-lg shadow">Menyesuaikan dan memastikan bahwa produk serta bahan baku yang digunakan memiliki logo halal pada kemasannya</li>
-          <li class="bg-teal-100 text-sm p-4 rounded-lg shadow">Menyesuaikan dan memastikan bahwa tata cara produksi sudah sesuai dengan standar kebersihan serta keamanan lingkungan</li>
+          <li class="bg-primary text-white text-sm p-4 rounded-lg">Anda diharuskan mengisi formulir perusahaan untuk kelengkapan data dalam proses sertifikasi nantinya</li>
+          <li class="bg-primary text-white text-sm p-4 rounded-lg">Menyesuaikan dan memastikan bahwa produk serta bahan baku yang digunakan memiliki logo halal pada kemasannya</li>
+          <li class="bg-primary text-white text-sm p-4 rounded-lg">Menyesuaikan dan memastikan bahwa tata cara produksi sudah sesuai dengan standar kebersihan serta keamanan lingkungan</li>
         </ul>
       </div>
-      <div class="md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
-        <img src="/src/assets/icon/proses2.png" alt="Mengisi Formulir Perusahaan" class="w-60 sm:w-72 md:w-80 h-auto" />
+
+      <!-- Gambar -->
+      <div class="w-full md:w-1/2 flex justify-center">
+        <img src="/src/assets/icon/proses2.png" alt="Proses 2" class="w-56 md:w-72 h-auto object-contain" />
       </div>
     </div>
 
-    <!-- Langkah 3 -->
-    <div class="relative md:flex mb-8">
-      <div class="absolute z-10 left-1/2 md:-translate-x-1/2 top-0 w-10 h-10 bg-teal-600 text-white font-bold flex items-center justify-center rounded-full shadow-md">
-        3
-      </div>
-      <div class="md:w-1/2 md:pr-12 mt-12 md:mt-0 z-10">
-        <h3 class="text-lg sm:text-xl font-semibold text-teal-700 mb-4">Bimbingan Sampai Tersertifikasi</h3>
+    <!-- LANGKAH 3 -->
+    <div class="relative flex flex-col-reverse md:flex-row items-center gap-10 md:gap-16">
+      <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-primary text-white font-bold flex items-center justify-center rounded-full z-10 shadow-md">3</div>
+
+      <!-- Text -->
+      <div class="w-full md:w-1/2">
+        <h3 class="text-xl font-semibold text-primary mb-4 text-center md:text-left">Bimbingan Sampai Tersertifikasi</h3>
         <ul class="space-y-4">
-          <li class="bg-teal-100 text-sm p-4 rounded-lg shadow">Anda akan melalui berbagai proses untuk memenuhi persyaratan produk agar tersertifikasi halal</li>
-          <li class="bg-teal-100 text-sm p-4 rounded-lg shadow">Anda akan dibimbing dan konsultan akan bersama membantu menjawab dan membimbing Anda pada jam kerja</li>
-          <li class="bg-teal-100 text-sm p-4 rounded-lg shadow">Anda akan mendapatkan sertifikat halal dalam kurun waktu satu bulan untuk produk Anda</li>
+          <li class="bg-primary text-white text-sm p-4 rounded-lg">Anda akan melalui berbagai proses untuk memenuhi persyaratan produk agar tersertifikasi halal</li>
+          <li class="bg-primary text-white text-sm p-4 rounded-lg">Anda akan dibimbing dan konsultan akan membantu menjawab dan membimbing Anda pada jam kerja</li>
+          <li class="bg-primary text-white text-sm p-4 rounded-lg">Anda akan mendapatkan sertifikat halal dalam kurun waktu satu bulan untuk produk Anda</li>
         </ul>
       </div>
-      <div class="md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
-        <img src="/src/assets/icon/proses3.png" alt="Bimbingan Sertifikasi" class="w-60 sm:w-72 md:w-80 h-auto" />
+
+      <!-- Gambar -->
+      <div class="w-full md:w-1/2 flex justify-center">
+        <img src="/src/assets/icon/proses3.png" alt="Proses 3" class="w-56 md:w-72 h-auto object-contain" />
       </div>
     </div>
   </div>
