@@ -1,6 +1,6 @@
 // main.js
 document.addEventListener('DOMContentLoaded', function() {
-    const components = ['header', 'footer', 'banner', 'testimonial', 'totalServices', 'why', 'reason' , 'about', 'chat' , 'contact', 'layanan', 'partner' , 'sponsor', "procces2"];
+    const components = ['header', 'footer', 'banner', 'testimonial', 'totalServices', 'why', 'reason' , 'about', 'chat' , 'contact', 'layanan', 'partner' , 'sponsor', "procces2", 'alurProses'];
     
     components.forEach(component => {
         const element = document.getElementById(component);
