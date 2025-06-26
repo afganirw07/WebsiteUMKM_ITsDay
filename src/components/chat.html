@@ -119,7 +119,7 @@
                         type="text"
                         id="messageInput"
                         class="flex-1 bg-transparent text-xs sm:text-sm placeholder-gray-500 focus:outline-none"
-                        placeholder="Type your message..." />
+                        placeholder="Ketik pesan Anda..." />
                     <button
                         id="sendButton"
                         class="p-2 rounded-full transition-all duration-200 bg-gray-200 text-gray-400 cursor-not-allowed">
@@ -129,14 +129,14 @@
                         </svg>
                     </button>
                 </div>
-                <p class="text-xs text-gray-500 mt-2 text-center hidden sm:block">Press Enter to send message</p>
+                <p class="text-xs text-gray-500 mt-2 text-center hidden sm:block">Tekan Enter untuk mengirim pesan</p>
             </div>
         </div>
     </section>
 
     <script>
         // ReKicks Chat Widget JavaScript
-        class ReKicksChatWidget {
+        class EcoBotChatWidget {
             constructor() {
                 this.apiKey = 'AIzaSyD2aks3kuDU9eTbGAIyDmO-gWEp7z8R1HU';
                 this.isOpen = false;
@@ -144,7 +144,7 @@
                 this.isTyping = false;
                 
                 // Mark as initialized
-                window.reKicksChatWidget = this;
+                window.EcoBotChatWidget = this;
                 
                 this.init();
             }
@@ -515,7 +515,7 @@
 
         // Initialize chat widget when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
-            new ReKicksChatWidget();
+            new EcoBotChatWidget();
         });
     </script>
 </body>
