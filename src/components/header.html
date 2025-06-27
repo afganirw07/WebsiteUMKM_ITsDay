@@ -1,46 +1,48 @@
 <header class="w-full h-auto lg:px-12 py-4 fixed top-0 z-999 flex flex-col justify-center items-center">
   <main class="flex justify-between w-full px-4 py-2 rounded-2xl">
-    <!-- Logo -->
-    <div class="flex items-center mr-6 relative">
-  <img src="/src/assets/icon/logoWeb.png" alt="Logo Ecotera" class="w-14 h-auto rounded-full" />
-  
-  <!-- Container relatif -->
-  <div class="relative ml-2">
-    <!-- Blur background -->
-    <div class="absolute inset-0 bg-secondary/60 blur-md rounded-lg z-0"></div>
-    
-    <!-- Teks di atas blur -->
-    <h1 class="relative font-lexend font-bold text-md text-white px-4 py-2 z-10">Ecotera</h1>
-  </div>
-</div>
+    <!-- logo -->
+    <div class="flex gap-1 items-center mr-6">
+      <img src="/src/assets/icon/logoWeb.png" alt="Logo Ecotera" class="w-15 h-15 rounded-full" />
+      <h1 class="font-lexend font-bold text-lg text-gray-800">Ecotera</h1>
+    </div>
 
 
     <!-- Desktop Navbar -->
     <div class="hidden lg:flex gap-6">
       <nav class="py-1 px-12 rounded-full flex items-center bg-primary backdrop-blur-xs">
         <ol class="flex gap-10 items-center justify-center">
-          <li class="relative group text-white font-lexend hover:text-yellow duration-300 transition-colors ease-out font-semibold cursor-pointer">
+          <li
+            class="relative group text-white font-lexend hover:text-yellow duration-300 transition-colors ease-out font-semibold cursor-pointer">
             <a href="#banner">Beranda</a>
-            <div class="bg-yellow h-[3px] w-0 group-hover:w-full transition-all duration-300 absolute left-0 -bottom-1"></div>
+            <div class="bg-yellow h-[3px] w-0 group-hover:w-full transition-all duration-300 absolute left-0 -bottom-1">
+            </div>
           </li>
-          <li class="relative group text-white font-lexend hover:text-yellow duration-300 transition-colors ease-out font-semibold cursor-pointer">
+          <li
+            class="relative group text-white font-lexend hover:text-yellow duration-300 transition-colors ease-out font-semibold cursor-pointer">
             <a href="#about">Tentang Kami</a>
-            <div class="bg-yellow h-[3px] w-0 group-hover:w-full transition-all duration-300 absolute left-0 -bottom-1"></div>
+            <div class="bg-yellow h-[3px] w-0 group-hover:w-full transition-all duration-300 absolute left-0 -bottom-1">
+            </div>
           </li>
-          <li class="relative group text-white font-lexend hover:text-yellow duration-300 transition-colors ease-out font-semibold cursor-pointer">
+          <li
+            class="relative group text-white font-lexend hover:text-yellow duration-300 transition-colors ease-out font-semibold cursor-pointer">
             <a href="#consultant">Layanan</a>
-            <div class="bg-yellow h-[3px] w-0 group-hover:w-full transition-all duration-300 absolute left-0 -bottom-1"></div>
+            <div class="bg-yellow h-[3px] w-0 group-hover:w-full transition-all duration-300 absolute left-0 -bottom-1">
+            </div>
           </li>
-          <li class="relative group text-white font-lexend hover:text-yellow duration-300 transition-colors ease-out font-semibold cursor-pointer">
+          <li
+            class="relative group text-white font-lexend hover:text-yellow duration-300 transition-colors ease-out font-semibold cursor-pointer">
             <a href="#contact">Kontak</a>
-            <div class="bg-yellow h-[3px] w-0 group-hover:w-full transition-all duration-300 absolute left-0 -bottom-1"></div>
+            <div class="bg-yellow h-[3px] w-0 group-hover:w-full transition-all duration-300 absolute left-0 -bottom-1">
+            </div>
           </li>
         </ol>
       </nav>
 
       <!-- Login Button -->
-      <div class="px-10 py-1 rounded-full flex justify-center items-center bg-primary group hover:bg-secondary cursor-pointer transition-colors duration-300 ease-out">
-        <h1 class="text-white font-lexend font-semibold text-lg group-hover:text-yellow transition-colors duration-300 ease-out">
+      <div
+        class="px-10 py-1 rounded-full flex justify-center items-center bg-primary group hover:bg-secondary cursor-pointer transition-colors duration-300 ease-out">
+        <h1
+          class="text-white font-lexend font-semibold text-lg group-hover:text-yellow transition-colors duration-300 ease-out">
           Masuk
         </h1>
       </div>
@@ -50,36 +52,42 @@
     <div id="burger" class="fixed top-6 right-4 lg:hidden p-2 bg-primary rounded-lg cursor-pointer z-[99]">
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
         <path fill="white"
-          d="M4 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m0 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m1 5a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2z"/>
+          d="M4 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m0 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m1 5a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2z" />
       </svg>
     </div>
 
     <!-- Mobile Menu -->
-    <div id="menu" class="lg:hidden fixed -top-4 left-0 w-screen min-h-[100dvh] bg-primary/90 backdrop-blur-md transform translate-x-full transition-all duration-500 ease-in-out flex flex-col items-start justify-center py-20 px-8 z-[99]">
+    <div id="menu"
+      class="lg:hidden fixed -top-4 left-0 w-screen min-h-[100dvh] bg-primary/90 backdrop-blur-md transform translate-x-full transition-all duration-500 ease-in-out flex flex-col items-start justify-center py-20 px-8 z-[99]">
       <nav class="font-bold font-lexend text-white w-full">
         <ul class="space-y-6 text-2xl md:text-3xl w-full">
           <li>
-            <a href="#banner" class="block border-b-[3px] border-primary w-full px-4 py-2 rounded-xl hover:text-yellow transition-colors duration-300 ease-out">
+            <a href="#banner"
+              class="block border-b-[3px] border-primary w-full px-4 py-2 rounded-xl hover:text-yellow transition-colors duration-300 ease-out">
               Beranda
             </a>
           </li>
           <li>
-            <a href="#about" class="block border-b-[3px] border-primary w-full px-4 py-2 rounded-xl hover:text-yellow transition-colors duration-300 ease-out">
+            <a href="#about"
+              class="block border-b-[3px] border-primary w-full px-4 py-2 rounded-xl hover:text-yellow transition-colors duration-300 ease-out">
               Tentang Kami
             </a>
           </li>
           <li>
-            <a href="#consultant" class="block border-b-[3px] border-primary w-full px-4 py-2 rounded-xl hover:text-yellow transition-colors duration-300 ease-out">
+            <a href="#consultant"
+              class="block border-b-[3px] border-primary w-full px-4 py-2 rounded-xl hover:text-yellow transition-colors duration-300 ease-out">
               Layanan
             </a>
           </li>
           <li>
-            <a href="#contact" class="block border-b-[3px] border-primary w-full px-4 py-2 rounded-xl hover:text-yellow transition-colors duration-300 ease-out">
+            <a href="#contact"
+              class="block border-b-[3px] border-primary w-full px-4 py-2 rounded-xl hover:text-yellow transition-colors duration-300 ease-out">
               Kontak
             </a>
           </li>
           <li>
-            <a href="#login" class="block border-b-[3px] border-primary w-full px-4 py-2 rounded-xl hover:text-yellow transition-colors duration-300 ease-out">
+            <a href="#login"
+              class="block border-b-[3px] border-primary w-full px-4 py-2 rounded-xl hover:text-yellow transition-colors duration-300 ease-out">
               Masuk
             </a>
           </li>
@@ -88,7 +96,8 @@
 
       <!-- Close Button -->
       <div id="close" class="absolute top-10 right-8 cursor-pointer text-white">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-9">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+          class="size-9">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
         </svg>
       </div>
