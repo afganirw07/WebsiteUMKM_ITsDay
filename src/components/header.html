@@ -1,14 +1,23 @@
 <header class="w-full h-auto lg:px-12 py-4 fixed top-0 z-999 flex flex-col justify-center items-center">
   <main class="flex justify-between w-full px-4 py-2 rounded-2xl">
     <!-- Logo -->
-    <div class="flex gap-1 items-center mr-6">
-      <img src="/src/assets/icon/logoWeb.png" alt="Logo Ecotera" class="w-15 h-15 rounded-full" />
-      <h1 class="font-lexend font-bold text-lg text-primary">Ecotera</h1>
-    </div>
+    <div class="flex items-center mr-6 relative">
+  <img src="/src/assets/icon/logoWeb.png" alt="Logo Ecotera" class="w-14 h-auto rounded-full" />
+  
+  <!-- Container relatif -->
+  <div class="relative ml-2">
+    <!-- Blur background -->
+    <div class="absolute inset-0 bg-secondary/60 blur-md rounded-lg z-0"></div>
+    
+    <!-- Teks di atas blur -->
+    <h1 class="relative font-lexend font-bold text-md text-white px-4 py-2 z-10">Ecotera</h1>
+  </div>
+</div>
+
 
     <!-- Desktop Navbar -->
     <div class="hidden lg:flex gap-6">
-      <nav class="py-3 px-12 rounded-full flex items-center bg-primary backdrop-blur-xs">
+      <nav class="py-1 px-12 rounded-full flex items-center bg-primary backdrop-blur-xs">
         <ol class="flex gap-10 items-center justify-center">
           <li class="relative group text-white font-lexend hover:text-yellow duration-300 transition-colors ease-out font-semibold cursor-pointer">
             <a href="#banner">Beranda</a>
@@ -30,7 +39,7 @@
       </nav>
 
       <!-- Login Button -->
-      <div class="px-10 py-3 rounded-full flex justify-center items-center bg-primary group hover:bg-secondary cursor-pointer transition-colors duration-300 ease-out">
+      <div class="px-10 py-1 rounded-full flex justify-center items-center bg-primary group hover:bg-secondary cursor-pointer transition-colors duration-300 ease-out">
         <h1 class="text-white font-lexend font-semibold text-lg group-hover:text-yellow transition-colors duration-300 ease-out">
           Masuk
         </h1>
