@@ -410,12 +410,14 @@ User: "${userInput}"`;
 }
 
 // Initialize chat widget when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    // Add a small delay to ensure all elements are rendered
-    setTimeout(() => {
-        new EcoTeraChatWidget();
-    }, 100);
+window.addEventListener('load', () => {
+    requestAnimationFrame(() => {
+        if (!window.ecoTeraChatWidget) {
+            window.ecoTeraChatWidget = new EcoTeraChatWidget();
+        }
+    });
 });
+
 
 // Also try to initialize on window load as fallback
 window.addEventListener('load', () => {
