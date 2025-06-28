@@ -168,10 +168,6 @@
                 return window.chatMessages;
             }
 
-            // Save messages to memory
-            saveMessages() {
-                window.chatMessages = this.messages;
-            }
 
             // Parse markdown to HTML
             parseMarkdown(text) {
@@ -398,7 +394,6 @@
                 };
 
                 this.messages.push(newMessage);
-                this.saveMessages();
                 messageInput.value = '';
                 this.updateSendButton();
                 
@@ -425,7 +420,7 @@
                     };
 
                     this.messages.push(botResponse);
-                    this.saveMessages();
+                    
                 } catch (error) {
                     console.error('Error:', error);
                     const errorResponse = {
@@ -438,7 +433,7 @@
                         }),
                     };
                     this.messages.push(errorResponse);
-                    this.saveMessages();
+                
                 }
 
                 this.isTyping = false;
