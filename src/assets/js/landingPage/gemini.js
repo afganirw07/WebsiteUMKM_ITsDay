@@ -28,10 +28,7 @@ class EcoTeraChatWidget {
         ];
     }
 
-    // Save messages to localStorage
-    saveMessages() {
-        localStorage.setItem('chatMessages', JSON.stringify(this.messages));
-    }
+
 
     // Parse markdown to HTML
     parseMarkdown(text) {
@@ -203,7 +200,7 @@ User: "${userInput}"`;
         };
 
         this.messages.push(newMessage);
-        this.saveMessages();
+        
         messageInput.value = '';
         this.updateSendButton();
         
@@ -226,7 +223,7 @@ User: "${userInput}"`;
             };
 
             this.messages.push(botResponse);
-            this.saveMessages();
+    
         } catch (error) {
             console.error('Error:', error);
             const errorResponse = {
@@ -239,7 +236,6 @@ User: "${userInput}"`;
                 }),
             };
             this.messages.push(errorResponse);
-            this.saveMessages();
         }
 
         this.isTyping = false;
@@ -414,12 +410,14 @@ User: "${userInput}"`;
 }
 
 // Initialize chat widget when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    // Add a small delay to ensure all elements are rendered
-    setTimeout(() => {
-        new EcoTeraChatWidget();
-    }, 100);
+window.addEventListener('load', () => {
+    requestAnimationFrame(() => {
+        if (!window.ecoTeraChatWidget) {
+            window.ecoTeraChatWidget = new EcoTeraChatWidget();
+        }
+    });
 });
+
 
 // Also try to initialize on window load as fallback
 window.addEventListener('load', () => {
